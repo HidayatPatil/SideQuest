@@ -38,12 +38,29 @@ html {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 3;
 }
 
 .nav-bar__logo {
-    background-color: rgb(250, 250, 250);
-    width: 80px;
-    height: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    img {
+        border: 1px solid #3F9FFF;
+        border-radius: 20px;
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-family: "Darumadrop One", sans-serif;
+        margin: auto 0;
+        font-size: 40px;
+        color: #ffffff;
+    }
+    
 }
 
 .nav-bar__list {
@@ -63,12 +80,36 @@ html {
     }
 }
 
+.hero__message {
+    position: absolute;
+    top: 180px;
+    left: 80px;
+    z-index: 2;
 
+    h1 {
+        margin: 0;
+        font-size: 80px;
+        color: #ffffff;
+    }
+}
 
 .hero__img {
-    background-color: grey;
+    position: relative;
     width: 100%;
     height: 800px;
+
+    .hero__img__main {
+        position: fixed;
+        width: 100%;
+    }
+
+    .hero__img__sticky {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: -20px;
+    }
 }
 
 .scroll-top {
@@ -82,6 +123,8 @@ html {
     bottom: 60px;
     right: 60px;
     justify-content: center;
+
+    z-index: 2;
 }
 
 .fab {
@@ -92,6 +135,10 @@ html {
 }
 
 /* ---------------------------ABOUT SECTION---------------------------- */
+.page-content {
+    z-index: 1;
+    background-color: #211D19;
+}
 
 #page-content__about {
     padding-top: 140px;
@@ -290,7 +337,7 @@ html {
 }
 
 .color__var1__secondary {
-    background-color: #211D19;
+    background-color: #0E0B08;
 }
 
 .color__var2__accent {
