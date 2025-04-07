@@ -204,7 +204,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    height: 1000px;
+    /* height: 1000px; */
 }
 
 .page-content__section h1 {
@@ -216,7 +216,7 @@ html {
 
 .page-content__section p {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     color: #bbbbbb;
 }
 
@@ -277,19 +277,154 @@ html {
 }
 
 /* ---------------------------TYPOGRAPHY SECTION---------------------------- */
-.typography__main {
+.typography__font {
     grid-column: 1/7;
     grid-row: 1/8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 28px 40px 32px 40px;
 }
 
-.typography__var1 {
+.font__styling {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+        color: #211D19;
+    }
+}
+
+.font__size {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+        color: #211D19;
+        text-align:right;
+    }
+}
+
+.font__styling :nth-child(1), .font__size :nth-child(1) {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.font__styling :nth-child(2), .font__size :nth-child(2) {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.font__styling :nth-child(3), .font__size :nth-child(3) {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.font__styling :nth-child(4), .font__size :nth-child(4) {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.font__styling :nth-child(5), .font__size :nth-child(5) {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.font__styling :nth-child(6), .font__size :nth-child(6) {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.font__styling :nth-child(7), .font__size :nth-child(7) {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.font__styling :nth-child(8), .font__size :nth-child(8) {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.typography__charset {
     grid-column: 1/7;
     grid-row: 8/13;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    padding: 28px 40px 32px 40px;
+
+    h2 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 400;
+        color: #211D19;
+    }
 }
 
-.typography__var2 {
+.charset__symbols {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    p {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        color: #413b3b;
+    }
+}
+
+
+.typography__example {
     grid-column: 7/13;
     grid-row: 1/13;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    padding: 28px 40px 32px 40px;
+
+    h2 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 400;
+        color: #211D19;
+    }
+}
+
+.example__content {
+    h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 0 8px 0;
+        color: #211D19;
+    }
+
+    h4 {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0 0 16px 0;
+        color: #716A63;
+    }
+
+    h5 {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0 0 12px 0;
+        color: #716A63;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 16px 0;
+        color: #716A63;
+    }
 }
 
 /* ---------------------------COLOR SECTION---------------------------- */
@@ -383,30 +518,46 @@ html {
 }
 
 /* ---------------------------VISUALS SECTION---------------------------- */
-.visuals__example1 {
-    grid-column: 1/7;
-    grid-row: 1/7;
+.section__visuals {
+    /* height: 460px; */
 }
 
-.visuals__example2 {
-    grid-column: 7/13;
-    grid-row: 1/7;
-}
-
-.visuals__example3 {
+.visuals__cards {
     grid-column: 1/5;
-    grid-row: 7/13;
+    grid-row: 1/13;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 40px;
 }
 
-.visuals__example4 {
+.visuals__fields {
     grid-column: 5/9;
-    grid-row: 7/13;
+    grid-row: 1/13;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px 40px;
 }
 
-.visuals__example5 {
+.visuals__buttons {
     grid-column: 9/13;
-    grid-row: 7/13;
+    grid-row: 1/10;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 40px;
+    justify-content: space-between;
 }
+
+.visuals__icon-button {
+    grid-column: 9/13;
+    grid-row: 10/13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px 40px;
+}
+
 
 /* ---------------------------GRAPHICS SECTION---------------------------- */
 .graphics__example1 {
