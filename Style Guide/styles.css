@@ -6,8 +6,9 @@ html {
 .guide-body {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    background-color: #211D19;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #211D19;   
 }
 
 .col-12 {
@@ -29,6 +30,7 @@ html {
     display: flex;
     flex-direction: row;
     height: 120px;
+    /* max-width: 1280px; */
     align-items: center;
     justify-content: space-between;
     background: rgba(27, 27, 26, 0.9);
@@ -59,13 +61,12 @@ html {
         font-size: 40px;
         color: #ffffff;
     }
-    
+
 }
 
 .nav-bar__list {
     display: flex;
     flex-direction: row;
-    width: auto;
     justify-content: space-between;
 
     ul {
@@ -82,6 +83,10 @@ html {
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
+}
+
+.page-intro__hero {
+    position: relative;
 }
 
 .hero__message {
@@ -105,6 +110,8 @@ html {
     .hero__img__main {
         position: fixed;
         width: 100%;
+
+        max-width: 1440px;
         height: 900px;
         object-fit: cover;
     }
@@ -303,46 +310,54 @@ html {
 
     p {
         color: #211D19;
-        text-align:right;
+        text-align: right;
     }
 }
 
-.font__styling :nth-child(1), .font__size :nth-child(1) {
+.font__styling :nth-child(1),
+.font__size :nth-child(1) {
     font-size: 28px;
     font-weight: 700;
 }
 
-.font__styling :nth-child(2), .font__size :nth-child(2) {
+.font__styling :nth-child(2),
+.font__size :nth-child(2) {
     font-size: 24px;
     font-weight: 500;
 }
 
-.font__styling :nth-child(3), .font__size :nth-child(3) {
+.font__styling :nth-child(3),
+.font__size :nth-child(3) {
     font-size: 20px;
     font-weight: 400;
 }
 
-.font__styling :nth-child(4), .font__size :nth-child(4) {
+.font__styling :nth-child(4),
+.font__size :nth-child(4) {
     font-size: 16px;
     font-weight: 200;
 }
 
-.font__styling :nth-child(5), .font__size :nth-child(5) {
+.font__styling :nth-child(5),
+.font__size :nth-child(5) {
     font-size: 16px;
     font-weight: 400;
 }
 
-.font__styling :nth-child(6), .font__size :nth-child(6) {
+.font__styling :nth-child(6),
+.font__size :nth-child(6) {
     font-size: 16px;
     font-weight: 600;
 }
 
-.font__styling :nth-child(7), .font__size :nth-child(7) {
+.font__styling :nth-child(7),
+.font__size :nth-child(7) {
     font-size: 14px;
     font-weight: 400;
 }
 
-.font__styling :nth-child(8), .font__size :nth-child(8) {
+.font__styling :nth-child(8),
+.font__size :nth-child(8) {
     font-size: 12px;
     font-weight: 400;
 }
@@ -434,6 +449,7 @@ html {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    height: 250px;
 }
 
 .color__var2 {
@@ -458,7 +474,6 @@ html {
 .color__var2__neutral,
 .color__var3__frog,
 .color__var3__warning {
-    /* flex-grow: 1; */
     flex: 1 0 0;
     border: 1px solid #5f5f5f;
     border-radius: 24px;
@@ -536,7 +551,8 @@ html {
     grid-row: 1/13;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 24px;
+    /* justify-content: space-between; */
     padding: 32px 40px;
 }
 
@@ -546,7 +562,7 @@ html {
     display: flex;
     flex-direction: column;
     padding: 32px 40px;
-    justify-content: space-between;
+    gap: 24px;
 }
 
 .visuals__icon-button {
