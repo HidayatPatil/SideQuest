@@ -1,0 +1,14 @@
+.tag {
+	display: flex;
+	padding: 4px 8px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 4px;
+	background: var(--Secondary-secondary-50, #edecec);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+    color: var(--Secondary-secondary-500, #625950);
+}
