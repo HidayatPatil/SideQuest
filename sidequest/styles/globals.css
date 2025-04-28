@@ -1,12 +1,10 @@
 @import "tailwindcss";
 
-
 body {
     background-color: black;
-    max-width: 426px;
-    overflow: hidden;
 }
 
-h1, p {
-    color: white;
+h1,
+p {
+	color: white;
 }
