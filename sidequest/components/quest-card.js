@@ -2,6 +2,7 @@ import styles from "@/components/quest-card.module.css";
 import Tags from "@/components/quest-tag";
 
 export default function QuestCard({
+	questImage,
 	title,
 	tags,
 	memberCount,
@@ -12,7 +13,9 @@ export default function QuestCard({
 	return (
 		<div className={styles.cardBody}>
 			<div className={styles.mainBody}>
-				<img className={styles.questImage} />
+				<img className={styles.questImage}
+					src={questImage}
+					alt={title}/>
 				<div className={styles.mainContent}>
 					<div className={styles.cardTitle}>
 						<h2 className={styles.titleText}>{title}</h2>
