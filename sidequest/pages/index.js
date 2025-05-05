@@ -1,3 +1,4 @@
+import ProfileCard from "@/components/profile-card";
 import QuestCard from "@/components/quest-card";
 import quests from "@/data/quest-card-data";
 import NavBar from "@/components/nav-bar";
@@ -7,22 +8,59 @@ export default function Home() {
 		<main>
 			{/* <h1>Welcome to the Home Page</h1>
 			<p>This is your dashboard or discovery page.</p> */}
-			{quests.map((quest, index) => {
-				const imagePath = `/quest_Image/quest-${index}.jpg`;
+			<div className="userProfileData">
+				<img className="homeIntroGraphic" src="\app_graphics\adventure.svg" />
+				<div className="profileCard">
+					<ProfileCard />
+				</div>
+			</div>
+			<div className="homeQuests">
+				<div className="upcomingQuests">
+					<div className="sectionTitle">
+						<h3>UPCOMING QUESTS</h3>
+					</div>
+					<div className="displayQuests"></div>
+					{quests.slice(0, 2).map((quest, index) => {
+						const imagePath = `/quest_Image/quest-${index}.jpg`;
 
-				return (
-					<QuestCard
-						key={index}
-						questImage = {imagePath}
-						title={quest.title}
-						tags={quest.tags}
-						memberCount={quest.memberCount}
-						date={quest.date}
-						distance={quest.distance}
-					/>
-				);
-			})}
-			<NavBar/>
+						return (
+							<QuestCard
+								key={index}
+								questImage={imagePath}
+								title={quest.title}
+								tags={quest.tags}
+								memberCount={quest.memberCount}
+								date={quest.date}
+								distance={quest.distance}
+							/>
+						);
+					})}
+				</div>
+				<hr className="divider"/>
+				<div className="completedQuests">
+					<div className="sectionTitle">
+						<h3>COMPLETED</h3>
+						<p>View All</p>
+					</div>
+					<div className="displayQuests"></div>
+					{quests.slice(3, 6).map((quest, index) => {
+						const imagePath = `/quest_Image/quest-${index}.jpg`;
+
+						return (
+							<QuestCard
+								key={index}
+								questImage={imagePath}
+								title={quest.title}
+								tags={quest.tags}
+								memberCount={quest.memberCount}
+								date={quest.date}
+								distance={quest.distance}
+							/>
+						);
+					})}
+				</div>
+			</div>
+			<NavBar />
 		</main>
 	);
 }
