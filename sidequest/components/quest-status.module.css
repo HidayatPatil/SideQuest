@@ -8,3 +8,8 @@
     color: var(--Red-Dark, #F65252);
     font-size: 12px;
 }
+
+.endingSoon {
+	width: 16px;
+	height: 16px;
+}
