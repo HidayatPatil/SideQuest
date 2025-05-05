@@ -1,0 +1,10 @@
+.cardStatus {
+	display: flex;
+	padding: 2px 6px 2px 4px;
+	align-items: center;
+	gap: 4px;
+	border-radius: 4px;
+	background-color: #feefef;
+    color: var(--Red-Dark, #F65252);
+    font-size: 12px;
+}
