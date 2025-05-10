@@ -1,6 +1,7 @@
-import styles from "@/components/quest-card.module.css";
-import Tags from "@/components/quest-tag";
-import QuestStatus from "./quest-status";
+import styles from "@/components/questCard/quest-card.module.css";
+import Tags from "@/components/questTag/quest-tag";
+import QuestStatus from "@/components/questStatus/quest-status";
+import { useEffect, useState } from "react";
 
 export default function QuestCard({
 	questImage,
@@ -11,10 +12,15 @@ export default function QuestCard({
 	distance,
 }) {
 	// show ending soon status
-	const today = new Date();
-	const questDate = new Date(date);
-	const dayDiff = Math.floor((questDate - today) / (1000 * 60 * 60 * 24));
-	const shouldShowStatus = dayDiff <= 2 && dayDiff >= 0;
+	const [shouldShowStatus, setShouldShowStatus] = useState(false);
+
+	useEffect(() => {
+		const today = new Date();
+		const questDate = new Date(date);
+		const dayDiff = Math.floor((questDate - today) / (1000 * 60 * 60 * 24));
+		const show = dayDiff <= 2 && dayDiff >= 0;
+		setShouldShowStatus(show);
+	}, [date]);
 
 	return (
 		<div className={styles.cardBody}>
@@ -59,7 +65,10 @@ export default function QuestCard({
 					{date}
 				</div>
 				<div className={styles.questDistance}>
-					<img className={styles.questLocation} src="/Icons/questLocation.svg" />
+					<img
+						className={styles.questLocation}
+						src="/Icons/questLocation.svg"
+					/>
 					{distance}
 				</div>
 			</div>

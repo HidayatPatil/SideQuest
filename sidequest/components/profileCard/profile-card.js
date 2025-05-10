@@ -1,4 +1,4 @@
-import styles from "@/components/profile-card.module.css";
+import styles from "@/components/profileCard/profile-card.module.css";
 
 export default function ProfileCard() {
 	return (

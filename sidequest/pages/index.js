@@ -1,13 +1,13 @@
-import ProfileCard from "@/components/profile-card";
-import QuestCard from "@/components/quest-card";
+import StatusBar from "@/components/statusBar/status-bar";
+import ProfileCard from "@/components/profileCard/profile-card";
+import QuestCard from "@/components/questCard/quest-card";
 import quests from "@/data/quest-card-data";
-import NavBar from "@/components/nav-bar";
+import NavBar from "@/components/navBar/nav-bar";
 
 export default function Home() {
 	return (
-		<main>
-			{/* <h1>Welcome to the Home Page</h1>
-			<p>This is your dashboard or discovery page.</p> */}
+		<div className="homePage">
+			<StatusBar />
 			<div className="userProfileData">
 				<img className="homeIntroGraphic" src="\app_graphics\adventure.svg" />
 				<div className="profileCard">
@@ -61,6 +61,6 @@ export default function Home() {
 				</div>
 			</div>
 			<NavBar />
-		</main>
+		</div>
 	);
 }

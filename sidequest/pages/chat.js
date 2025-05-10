@@ -1,4 +1,4 @@
-import NavBar from "@/components/nav-bar";
+import NavBar from "@/components/navBar/nav-bar";
 
 export default function Chat() {
 	return (

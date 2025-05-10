@@ -5,6 +5,7 @@ const quests = [
 		memberCount: "3/6",
 		distance: "5Km",
 		date: "08 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Beach Volleyball Meetup and Sunset Gathering",
@@ -12,6 +13,7 @@ const quests = [
 		memberCount: "5/10",
 		distance: "2Km",
 		date: "01 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Downtown Food Crawl Through the Best Local Eats",
@@ -19,6 +21,7 @@ const quests = [
 		memberCount: "8/12",
 		distance: "1Km",
 		date: "18 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Late Night Board Games and Pizza Party",
@@ -26,6 +29,7 @@ const quests = [
 		memberCount: "4/6",
 		distance: "500m",
 		date: "09 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Morning Yoga and Meditation Session in the Park",
@@ -33,6 +37,7 @@ const quests = [
 		memberCount: "7/15",
 		distance: "3Km",
 		date: "01 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "48-Hour Coding Hackathon and Tech Expo",
@@ -40,6 +45,7 @@ const quests = [
 		memberCount: "10/20",
 		distance: "8Km",
 		date: "03 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Photography Walk Exploring Hidden City Gems",
@@ -47,6 +53,7 @@ const quests = [
 		memberCount: "6/10",
 		distance: "4Km",
 		date: "06 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Weekend Camping Trip to National Forest Reserve",
@@ -54,6 +61,7 @@ const quests = [
 		memberCount: "5/8",
 		distance: "15Km",
 		date: "06 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Local Farmers Market Guided Walking Tour",
@@ -61,6 +69,7 @@ const quests = [
 		memberCount: "9/12",
 		distance: "2Km",
 		date: "30 Apr 2025",
+		isLiked: false,
 	},
 	{
 		title: "Art Museum Visit with Private Gallery Tour",
@@ -68,6 +77,7 @@ const quests = [
 		memberCount: "4/10",
 		distance: "1Km",
 		date: "22 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Surfing Lessons and Beach Bonfire Social",
@@ -75,6 +85,7 @@ const quests = [
 		memberCount: "6/8",
 		distance: "20Km",
 		date: "25 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Evening Run Club and Post-Run Smoothies",
@@ -82,6 +93,7 @@ const quests = [
 		memberCount: "5/15",
 		distance: "2Km",
 		date: "10 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Karaoke Night Extravaganza at Local Pub",
@@ -89,6 +101,7 @@ const quests = [
 		memberCount: "12/20",
 		distance: "500m",
 		date: "21 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Nature Hike Along the River and Picnic Lunch",
@@ -96,6 +109,7 @@ const quests = [
 		memberCount: "7/10",
 		distance: "7Km",
 		date: "09 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Craft Beer Tasting and Brewery Tour Experience",
@@ -103,6 +117,7 @@ const quests = [
 		memberCount: "10/12",
 		distance: "1Km",
 		date: "04 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Potluck Picnic Party at City Botanical Gardens",
@@ -110,6 +125,7 @@ const quests = [
 		memberCount: "8/10",
 		distance: "3Km",
 		date: "21 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Sushi Making Workshop and Dinner Celebration",
@@ -117,6 +133,7 @@ const quests = [
 		memberCount: "5/8",
 		distance: "2Km",
 		date: "23 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Indoor Rock Climbing Session for All Levels",
@@ -124,6 +141,7 @@ const quests = [
 		memberCount: "4/6",
 		distance: "5Km",
 		date: "23 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Citywide Scavenger Hunt with Mystery Challenges",
@@ -131,6 +149,7 @@ const quests = [
 		memberCount: "9/15",
 		distance: "2Km",
 		date: "03 May 2025",
+		isLiked: false,
 	},
 	{
 		title: "Open Mic Poetry Night Featuring Local Artists",
@@ -138,6 +157,7 @@ const quests = [
 		memberCount: "6/12",
 		distance: "500m",
 		date: "24 May 2025",
+		isLiked: false,
 	},
 ];
 
