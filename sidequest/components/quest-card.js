@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "@/components/quest-card.module.css";
 import Tags from "@/components/quest-tag";
 import QuestStatus from "./quest-status";
 
 export default function QuestCard({
+	id,
     questImage,
     title,
     tags,
@@ -12,14 +14,24 @@ export default function QuestCard({
     distance,
 }) {
     // show ending soon status
-    const today = new Date();
-    const questDate = new Date(date);
-    const dayDiff = Math.floor((questDate - today) / (1000 * 60 * 60 * 24));
-    const shouldShowStatus = dayDiff <= 2 && dayDiff >= 0;
+
+    const [shouldShowStatus, setShouldShowStatus] = useState(false);
+    const [isClient, setIsClient] = useState(false); //date on client side?
+
+    useEffect(() => {
+        setIsClient(true); // ✅ confirm we're on client
+    }, []);
+
+    useEffect(() => {
+        const today = new Date();
+        const questDate = new Date(date);
+        const dayDiff = Math.floor((questDate - today) / (1000 * 60 * 60 * 24));
+        setShouldShowStatus(dayDiff <= 2 && dayDiff >= 0);
+    }, [date]);
 
     return (
         <Link
-            href="/quest-detail"
+            href={`/quest-detail/${id}`}
             passHref
         >
             <div className={styles.cardBody}>

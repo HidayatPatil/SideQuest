@@ -1,5 +1,6 @@
 const quests = [
 	{
+		id: 0,
 		title: "Weekend Whistler Mountain Hiking Adventure",
 		tags: ["Hiking", "Outdoor", "+2"],
 		memberCount: "3/6",
@@ -7,6 +8,7 @@ const quests = [
 		date: "08 May 2025",
 	},
 	{
+		id: 1,
 		title: "Beach Volleyball Meetup and Sunset Gathering",
 		tags: ["Sports", "Beach", "Fun"],
 		memberCount: "5/10",
@@ -14,6 +16,7 @@ const quests = [
 		date: "01 May 2025",
 	},
 	{
+		id: 2,
 		title: "Downtown Food Crawl Through the Best Local Eats",
 		tags: ["Food", "Social", "City"],
 		memberCount: "8/12",
@@ -21,6 +24,7 @@ const quests = [
 		date: "18 May 2025",
 	},
 	{
+		id: 3,
 		title: "Late Night Board Games and Pizza Party",
 		tags: ["Games", "Chill", "Indoor"],
 		memberCount: "4/6",
@@ -28,6 +32,7 @@ const quests = [
 		date: "09 May 2025",
 	},
 	{
+		id: 4,
 		title: "Morning Yoga and Meditation Session in the Park",
 		tags: ["Fitness", "Outdoor", "Health"],
 		memberCount: "7/15",
@@ -35,6 +40,7 @@ const quests = [
 		date: "01 May 2025",
 	},
 	{
+		id: 5,
 		title: "48-Hour Coding Hackathon and Tech Expo",
 		tags: ["Tech", "Competition", "Fun"],
 		memberCount: "10/20",
@@ -42,6 +48,7 @@ const quests = [
 		date: "03 May 2025",
 	},
 	{
+		id: 6,
 		title: "Photography Walk Exploring Hidden City Gems",
 		tags: ["Photography", "Art", "Outdoor"],
 		memberCount: "6/10",
@@ -49,6 +56,7 @@ const quests = [
 		date: "06 May 2025",
 	},
 	{
+		id: 7,
 		title: "Weekend Camping Trip to National Forest Reserve",
 		tags: ["Camping", "Nature", "Adventure"],
 		memberCount: "5/8",
@@ -56,6 +64,7 @@ const quests = [
 		date: "06 May 2025",
 	},
 	{
+		id: 8,
 		title: "Local Farmers Market Guided Walking Tour",
 		tags: ["Food", "Local", "Chill"],
 		memberCount: "9/12",
@@ -63,6 +72,7 @@ const quests = [
 		date: "30 Apr 2025",
 	},
 	{
+		id: 9,
 		title: "Art Museum Visit with Private Gallery Tour",
 		tags: ["Art", "Culture", "Indoor"],
 		memberCount: "4/10",
@@ -70,6 +80,7 @@ const quests = [
 		date: "22 May 2025",
 	},
 	{
+		id: 10,
 		title: "Surfing Lessons and Beach Bonfire Social",
 		tags: ["Water", "Adventure", "Sports"],
 		memberCount: "6/8",
@@ -77,6 +88,7 @@ const quests = [
 		date: "25 May 2025",
 	},
 	{
+		id: 11,
 		title: "Evening Run Club and Post-Run Smoothies",
 		tags: ["Running", "Fitness", "Outdoor"],
 		memberCount: "5/15",
@@ -84,6 +96,7 @@ const quests = [
 		date: "10 May 2025",
 	},
 	{
+		id: 12,
 		title: "Karaoke Night Extravaganza at Local Pub",
 		tags: ["Music", "Party", "Fun"],
 		memberCount: "12/20",
@@ -91,6 +104,7 @@ const quests = [
 		date: "21 May 2025",
 	},
 	{
+		id: 13,
 		title: "Nature Hike Along the River and Picnic Lunch",
 		tags: ["Nature", "Adventure", "Hiking"],
 		memberCount: "7/10",
@@ -98,6 +112,7 @@ const quests = [
 		date: "09 May 2025",
 	},
 	{
+		id: 14,
 		title: "Craft Beer Tasting and Brewery Tour Experience",
 		tags: ["Drinks", "Social", "Local"],
 		memberCount: "10/12",
@@ -105,6 +120,7 @@ const quests = [
 		date: "04 May 2025",
 	},
 	{
+		id: 15,
 		title: "Potluck Picnic Party at City Botanical Gardens",
 		tags: ["Food", "Friends", "Outdoor"],
 		memberCount: "8/10",
@@ -112,6 +128,7 @@ const quests = [
 		date: "21 May 2025",
 	},
 	{
+		id: 16,
 		title: "Sushi Making Workshop and Dinner Celebration",
 		tags: ["Food", "Workshop", "Indoor"],
 		memberCount: "5/8",
@@ -119,6 +136,7 @@ const quests = [
 		date: "23 May 2025",
 	},
 	{
+		id: 17,
 		title: "Indoor Rock Climbing Session for All Levels",
 		tags: ["Sports", "Fitness", "Challenge"],
 		memberCount: "4/6",
@@ -126,6 +144,7 @@ const quests = [
 		date: "23 May 2025",
 	},
 	{
+		id: 18,
 		title: "Citywide Scavenger Hunt with Mystery Challenges",
 		tags: ["Adventure", "City", "Fun"],
 		memberCount: "9/15",
@@ -133,6 +152,7 @@ const quests = [
 		date: "03 May 2025",
 	},
 	{
+		id: 19,
 		title: "Open Mic Poetry Night Featuring Local Artists",
 		tags: ["Poetry", "Art", "Indoor"],
 		memberCount: "6/12",
