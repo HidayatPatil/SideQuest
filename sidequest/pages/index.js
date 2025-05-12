@@ -25,11 +25,6 @@ export default function Home() {
 						const imagePath = `/quest_Image/quest-${index}.jpg`;
 
                         return (
-                            // <Link
-                            //     key={quest.id}
-                            //     href={`/quest-detail/${quest.id}`}
-                            //     passHref
-                            // > </Link>
                                 <QuestCard
                                     key={index}
                                     id={quest.id}
@@ -47,7 +42,6 @@ export default function Home() {
                 <div className="completedQuests">
                     <div className="sectionTitle">
                         <h3>COMPLETED</h3>
-                        <p>View All</p>
                     </div>
                     <div className="displayQuests"></div>
                     {quests.slice(3, 6).map((quest, index) => {
