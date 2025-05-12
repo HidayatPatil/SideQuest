@@ -1,4 +1,3 @@
-
 .button {
     display: flex;
     width: auto;
@@ -14,35 +13,44 @@
 }
 
 .primary {
-    background: var(--Primary-primary-BASE, #3F9FFF);
-    box-shadow: 0px 4px 0px 0px #2D71B5;
+    background: var(--Primary-primary-BASE, #3f9fff);
+    box-shadow: 0px 4px 0px 0px #2d71b5;
     color: white;
     border: none;
 }
 
 .secondary {
-    background: var(--WHITE, #FFF);
-    border-top: 1px solid var(--Primary-primary-700, #2D71B5);
-    border-right: 1px solid var(--Primary-primary-700, #2D71B5);
-    border-left: 1px solid var(--Primary-primary-700, #2D71B5);
-    box-shadow: 0px 4px 0px 0px #2D71B5;
-    color: #2D71B5;
+    background: var(--WHITE, #fff);
+    border-top: 1px solid var(--Primary-primary-700, #2d71b5);
+    border-right: 1px solid var(--Primary-primary-700, #2d71b5);
+    border-left: 1px solid var(--Primary-primary-700, #2d71b5);
+    box-shadow: 0px 4px 0px 0px #2d71b5;
+    color: #2d71b5;
 }
 
 .primaryOutline {
-    background: var(--WHITE, #FFF);
-    border-top: 1px solid var(--Secondary-secondary-100, #D6D3D2);
-    border-right: 1px solid var(--Secondary-secondary-100, #D6D3D2);
-    border-left: 1px solid var(--Secondary-secondary-100, #D6D3D2);
-    box-shadow: 0px 4px 0px 0px #D6D3D2;
+    background: var(--WHITE, #fff);
+    border-top: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+    border-right: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+    border-left: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+    box-shadow: 0px 4px 0px 0px #d6d3d2;
     color: #333;
 }
 
 .primaryDisabled {
-    background: var(--Secondary-secondary-75, #E4E2E0);
-    border: 1px solid var(--Secondary-secondary-100, #D6D3D2);
-    color: #A0A0A0;
+    background: var(--Secondary-secondary-75, #e4e2e0);
+    border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+    color: #a0a0a0;
     cursor: not-allowed;
+}
+
+.back {
+    background: var(--WHITE, #fff);
+    border-radius: 100px;
+    border-top: 1px solid var(--Primary-primary-700, #2d71b5);
+    border-right: 1px solid var(--Primary-primary-700, #2d71b5);
+    border-left: 1px solid var(--Primary-primary-700, #2d71b5);
+    box-shadow: 0px 4px 0px 0px #2d71b5;
 }
 
 .icon {
@@ -62,18 +70,17 @@
 }
 
 .primaryText {
-    color: var(--BLACK, #0C0B0B);
+    color: var(--BLACK, #0c0b0b);
 }
 
 .secondaryText {
-    color: var(--Primary-primary-700, #2D71B5);
+    color: var(--Primary-primary-700, #2d71b5);
 }
 
 .primaryOutlineText {
-    color: var(--Secondary-secondary-700, #45403A);
+    color: var(--Secondary-secondary-700, #45403a);
 }
 
 .primaryDisabledText {
-    color: var(--Secondary-secondary-400, #8A827A);
+    color: var(--Secondary-secondary-400, #8a827a);
 }
-

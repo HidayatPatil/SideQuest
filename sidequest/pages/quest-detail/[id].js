@@ -24,7 +24,9 @@ export default function QuestDetail() {
                         src={imagePath}
                         alt={quest.title}
                     />
-                    <div className="dateCalender">{quest.date}</div>
+                    <div className="questHeaderContainer">
+                        <div className="dateCalender">{quest.date}</div>
+                    </div>
                 </div>
 
                 <div className="questDetailBody">
@@ -41,11 +43,13 @@ export default function QuestDetail() {
                     </div>
                 </div>
 
-                <div className="sectionTitle">
-                    <h3>QUEST MASTER</h3>
-                </div>
-                <div className="userProfileData">
-                    <ProfileCard />
+                <div className="questMaster">
+                    <div className="sectionTitle">
+                        <h3>QUEST MASTER</h3>
+                    </div>
+                    <div className="userProfileData">
+                        <ProfileCard />
+                    </div>
                 </div>
 
                 <hr className="divider" />

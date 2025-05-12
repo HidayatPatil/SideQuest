@@ -89,11 +89,23 @@ h1 {
 
 /* -------------------------Quest Details---------------------------- */
 
+.questDetailPage {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .questDetailBody {
     margin: auto 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.questMaster {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .locationDetails {
@@ -112,6 +124,25 @@ h1 {
     display: flex;
     align-items: center;
     gap: 4px;
+}
+
+.dateCalender {
+    color: var(--Primary-primary-700, #2d71b5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+    padding: 12px 14px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 100px;
+    border-top: 1px solid var(--Primary-primary-700, #2d71b5);
+    border-right: 1px solid var(--Primary-primary-700, #2d71b5);
+    border-left: 1px solid var(--Primary-primary-700, #2d71b5);
+    background: var(--WHITE, #fff);
+
+    /* Primary700-Shadow */
+    box-shadow: 0px 4px 0px 0px #2d71b5;
 }
 
 .locationDetails {
