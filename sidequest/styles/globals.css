@@ -97,9 +97,28 @@ h1 {
     margin: auto 16px;
 }
 
-/* -------------------------Quest Board---------------------------- */
-.questBoardContainer,
 .questDetailContainer {
+    height: 100vh;
+    /* overflow: hidden; 🔒 Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.cardTags {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.locationDetails {
+    color: var(--Secondary-secondary-400, #8a827a);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* -------------------------Quest Board---------------------------- */
+.questBoardContainer {
     height: 100vh;
     /* overflow: hidden; 🔒 Prevent scrolling */
     display: flex;

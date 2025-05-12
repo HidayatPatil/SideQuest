@@ -1,6 +1,8 @@
 .profileContainer {
 	width: auto;
 	margin: 0 16px;
+	font-family: Rubik;
+
 }
 
 .profileMain {
@@ -51,5 +53,17 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.userName {
+	color: var(--BLACK, #0C0B0B);
+	text-align: center;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; 
+}
+
+
+
 
 
