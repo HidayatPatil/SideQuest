@@ -3,6 +3,7 @@ import ProfileCard from "@/components/profile-card";
 import QuestCard from "@/components/quest-card";
 import quests from "@/data/quest-card-data";
 import NavBar from "@/components/nav-bar";
+import Button from "@/components/button";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
                 <div className="profileCard">
                     <ProfileCard />
                 </div>
+
             </div>
             <div className="homeQuests">
                 <div className="upcomingQuests">
@@ -28,22 +30,16 @@ export default function Home() {
                         const imagePath = `/quest_Image/quest-${index}.jpg`;
 
                         return (
-                            <Link
+                            <QuestCard
                                 key={quest.id}
-                                href={`/quest-detail/${quest.id}`}
-                                passHref
-                            >
-                                <QuestCard
-                                    //key={index}
-                                    id={quest.id}
-                                    questImage={imagePath}
-                                    title={quest.title}
-                                    tags={quest.tags}
-                                    memberCount={quest.memberCount}
-                                    date={quest.date}
-                                    distance={quest.distance}
-                                />
-                            </Link>
+                                id={quest.id}
+                                questImage={imagePath}
+                                title={quest.title}
+                                tags={quest.tags}
+                                memberCount={quest.memberCount}
+                                date={quest.date}
+                                distance={quest.distance}
+                            />
                         );
                     })}
                 </div>
@@ -59,7 +55,8 @@ export default function Home() {
 
                         return (
                             <QuestCard
-                                key={index}
+                                key={quest.id}
+                                id={quest.id}
                                 questImage={imagePath}
                                 title={quest.title}
                                 tags={quest.tags}

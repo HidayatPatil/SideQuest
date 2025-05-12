@@ -3,16 +3,8 @@ import ProfileCard from "@/components/profile-card";
 import Tags from "@/components/quest-tag";
 import quests from "@/data/quest-card-data";
 import QuestStatus from "@/components/quest-status";
+import Button from "@/components/button";
 //import Link from "next/link";
-
-const tags = [
-    "Hiking",
-    "Nature Trail",
-    "Mountains",
-    "Exercise",
-    "Outdoor",
-    "Adventure",
-];
 
 export default function QuestDetail() {
 

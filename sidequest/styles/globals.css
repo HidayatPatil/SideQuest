@@ -2,81 +2,81 @@
 
 html,
 body {
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
-	background-color: var(--Secondary-secondary-50, #edecec);
+    background-color: var(--Secondary-secondary-50, #edecec);
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	gap: 126px;
+    display: flex;
+    flex-direction: column;
+    gap: 126px;
 }
 
 .userProfileData {
-	position: relative;
-	width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .homeIntroGraphic {
-	width: 100%;
-	object-fit: cover;
+    width: 100%;
+    object-fit: cover;
 }
 
 .profileCard {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -102px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -102px;
 }
 
 .homeQuests {
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-	width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: auto;
 }
 
 .upcomingQuests,
 .completedQuests {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .sectionTitle {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: 0 16px 8px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 16px 8px 16px;
 }
 
 .sectionTitle h3 {
-	color: var(--Primary-primary-700, #2d71b5);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 20px; /* 125% */
+    color: var(--Primary-primary-700, #2d71b5);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
 }
 
 .sectionTitle p {
-	color: var(--Secondary-secondary-400, #8a827a);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 20px; /* 125% */
+    color: var(--Secondary-secondary-400, #8a827a);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
 }
 
 .divider {
-	margin: 0 16px;
-	color: #bbb7b4;
+    margin: 0 16px;
+    color: #bbb7b4;
 }
 
 .questImage {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
