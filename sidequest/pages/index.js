@@ -3,7 +3,7 @@ import ProfileCard from "@/components/profileCard/profile-card";
 import QuestCard from "@/components/questCard/quest-card";
 import Link from "next/link";
 import quests from "@/data/quest-card-data";
-import Button from "@/components/button";
+import Button from "@/components/button/button";
 import NavBar from "@/components/navBar/nav-bar";
 
 export default function Home() {
@@ -25,14 +25,12 @@ export default function Home() {
                         <h3>UPCOMING QUESTS</h3>
                     </div>
                     <div className="displayQuests"></div>
-                    {quests.slice(0, 2).map((quest, index) => {
-                        const imagePath = `/quest_Image/quest-${index}.jpg`;
-
+                    {quests.slice(0, 2).map((quest) => {
                         return (
                             <QuestCard
                                 key={quest.id}
                                 id={quest.id}
-                                questImage={imagePath}
+                                img={quest.img}
                                 title={quest.title}
                                 tags={quest.tags}
                                 memberCount={quest.memberCount}
@@ -48,14 +46,12 @@ export default function Home() {
                         <h3>COMPLETED</h3>
                     </div>
                     <div className="displayQuests"></div>
-                    {quests.slice(3, 6).map((quest, index) => {
-                        const imagePath = `/quest_Image/quest-${index}.jpg`;
-
+                    {quests.slice(3, 6).map((quest) => {
                         return (
                             <QuestCard
                                 key={quest.id}
                                 id={quest.id}
-                                questImage={imagePath}
+                                img={quest.img}
                                 title={quest.title}
                                 tags={quest.tags}
                                 memberCount={quest.memberCount}
