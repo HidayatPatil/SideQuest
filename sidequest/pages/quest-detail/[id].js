@@ -25,9 +25,6 @@ export default function QuestDetail() {
                         alt={quest.title}
                     />
                     <div className="dateCalender">{quest.date}</div>
-                    <div className="sectionTitle">
-                        <h3>{quest.title}</h3>
-                    </div>
                 </div>
 
                 <div className="questDetailBody">

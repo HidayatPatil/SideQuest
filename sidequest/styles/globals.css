@@ -17,6 +17,12 @@ body {
     gap: 126px;
 }
 
+h1 {
+    color: var(--BLACK, #0c0b0b);
+    font-size: 24px;
+    font-weight: 600;
+}
+
 .userProfileData {
     position: relative;
     width: 100%;
@@ -81,6 +87,16 @@ body {
     object-fit: cover;
 }
 
+/* -------------------------Quest Details---------------------------- */
+
+.questDetailBody {
+    margin: auto 16px;
+}
+
+.locationDetails {
+    margin: auto 16px;
+}
+
 /* -------------------------Quest Board---------------------------- */
 .questBoardContainer,
 .questDetailContainer {
@@ -115,10 +131,7 @@ body {
 }
 
 .boardHeader h1 {
-    color: var(--BLACK, #0c0b0b);
     text-align: center;
-    font-size: 24px;
-    font-weight: 600;
 }
 
 .boardActions {
