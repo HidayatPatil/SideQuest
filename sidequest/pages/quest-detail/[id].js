@@ -3,7 +3,7 @@ import ProfileCard from "@/components/profileCard/profile-card";
 import Tags from "@/components/questTag/quest-tag";
 import quests from "@/data/quest-card-data";
 import QuestStatus from "@/components/questStatus/quest-status";
-import Button from "@/components/button";
+import Button from "@/components/button/button";
 //import Link from "next/link";
 
 export default function QuestDetail() {
@@ -29,12 +29,7 @@ export default function QuestDetail() {
 
             <div className="questDetailBody">
                 <h1>{quest.title}</h1>
-                <p className="questDescription">
-                    Join us for a scenic 5-mile hike through lush forests and
-                    stunning viewpoints. This is a casual-paced hike suitable
-                    for all skill levels. We'll take breaks for snacks and
-                    photos!
-                </p>
+                <p className="questDescription">{quest.desc}</p>
             </div>
 
             <div className="cardTags">
