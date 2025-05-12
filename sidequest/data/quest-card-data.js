@@ -6,6 +6,7 @@ const quests = [
 		memberCount: "3/6",
 		distance: "5Km",
 		date: "08 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 1,
@@ -14,6 +15,7 @@ const quests = [
 		memberCount: "5/10",
 		distance: "2Km",
 		date: "01 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 2,
@@ -22,6 +24,7 @@ const quests = [
 		memberCount: "8/12",
 		distance: "1Km",
 		date: "18 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 3,
@@ -30,6 +33,7 @@ const quests = [
 		memberCount: "4/6",
 		distance: "500m",
 		date: "09 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 4,
@@ -38,6 +42,7 @@ const quests = [
 		memberCount: "7/15",
 		distance: "3Km",
 		date: "01 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 5,
@@ -46,6 +51,7 @@ const quests = [
 		memberCount: "10/20",
 		distance: "8Km",
 		date: "03 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 6,
@@ -54,6 +60,7 @@ const quests = [
 		memberCount: "6/10",
 		distance: "4Km",
 		date: "06 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 7,
@@ -62,6 +69,7 @@ const quests = [
 		memberCount: "5/8",
 		distance: "15Km",
 		date: "06 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 8,
@@ -70,6 +78,7 @@ const quests = [
 		memberCount: "9/12",
 		distance: "2Km",
 		date: "30 Apr 2025",
+		isLiked: false,
 	},
 	{
 		id: 9,
@@ -78,6 +87,7 @@ const quests = [
 		memberCount: "4/10",
 		distance: "1Km",
 		date: "22 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 10,
@@ -86,6 +96,7 @@ const quests = [
 		memberCount: "6/8",
 		distance: "20Km",
 		date: "25 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 11,
@@ -94,6 +105,7 @@ const quests = [
 		memberCount: "5/15",
 		distance: "2Km",
 		date: "10 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 12,
@@ -102,6 +114,7 @@ const quests = [
 		memberCount: "12/20",
 		distance: "500m",
 		date: "21 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 13,
@@ -110,6 +123,7 @@ const quests = [
 		memberCount: "7/10",
 		distance: "7Km",
 		date: "09 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 14,
@@ -118,6 +132,7 @@ const quests = [
 		memberCount: "10/12",
 		distance: "1Km",
 		date: "04 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 15,
@@ -126,6 +141,7 @@ const quests = [
 		memberCount: "8/10",
 		distance: "3Km",
 		date: "21 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 16,
@@ -134,6 +150,7 @@ const quests = [
 		memberCount: "5/8",
 		distance: "2Km",
 		date: "23 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 17,
@@ -142,6 +159,7 @@ const quests = [
 		memberCount: "4/6",
 		distance: "5Km",
 		date: "23 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 18,
@@ -150,6 +168,7 @@ const quests = [
 		memberCount: "9/15",
 		distance: "2Km",
 		date: "03 May 2025",
+		isLiked: false,
 	},
 	{
 		id: 19,
@@ -158,6 +177,7 @@ const quests = [
 		memberCount: "6/12",
 		distance: "500m",
 		date: "24 May 2025",
+		isLiked: false,
 	},
 ];
 
