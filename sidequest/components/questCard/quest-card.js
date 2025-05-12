@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function QuestCard({
 	id,
-	questImage,
+	img,
 	title,
 	tags,
 	memberCount,
@@ -42,7 +42,7 @@ export default function QuestCard({
 		<Link key={id} href={`/quest-detail/${id}`} passHref>
 			<div className={styles.cardBody}>
 				<div className={styles.mainBody}>
-					<img className={styles.questImage} src={questImage} alt={title} />
+					<img className={styles.questImage} src={img} alt={title} />
 					<div className={styles.mainContent}>
 						<div className={styles.cardTitle}>
 							<h2 className={styles.titleText}>{title}</h2>
