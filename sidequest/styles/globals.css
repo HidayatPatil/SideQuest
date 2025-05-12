@@ -91,6 +91,9 @@ h1 {
 
 .questDetailBody {
     margin: auto 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .locationDetails {
@@ -112,9 +115,62 @@ h1 {
 }
 
 .locationDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+}
+
+.locationDetails p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    align-self: stretch;
     color: var(--Secondary-secondary-400, #8a827a);
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 18px;
+    border-top: 1px solid var(--Secondary-secondary-75, #e4e2e0);
+}
+
+.locationDetails .locationIconContainer {
+    right: 24px;
+}
+
+.locationView {
+    background-image: url("/app_Graphics/map.png");
+    background-size: cover;
+    background-position: center;
+    height: 207px;
+    border-radius: 12px 12px 0px 0px;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.locationIconContainer {
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    border: 1.5px solid var(--Secondary-secondary-50, #edecec);
+    background: white;
+    margin: 8px 8px;
+}
+
+.locationIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* -------------------------Quest Board---------------------------- */

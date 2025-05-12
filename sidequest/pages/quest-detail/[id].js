@@ -60,15 +60,18 @@ export default function QuestDetail() {
                         className="googleMapLink"
                         target="_blank"
                     >
+                        <div className="locationView">
+                            <div className="locationIconContainer">
+                                <img
+                                    className="locationIcon"
+                                    src="/Icons/ArrowsOut.svg"
+                                />
+                            </div>
+                        </div>
                         <p>
                             Note: Location can potential change. Make sure to
                             check in often to be updated on any changes.
                         </p>
-                        <img
-                            className="locationMap"
-                            src="/app_Graphics/Map.svg"
-                            alt="Map"
-                        />
                     </a>
                 </div>
 
