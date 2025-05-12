@@ -1,6 +1,7 @@
 import StatusBar from "@/components/statusBar/status-bar";
 import ProfileCard from "@/components/profileCard/profile-card";
 import QuestCard from "@/components/questCard/quest-card";
+import Link from "next/link";
 import quests from "@/data/quest-card-data";
 import NavBar from "@/components/navBar/nav-bar";
 
@@ -23,28 +24,35 @@ export default function Home() {
 					{quests.slice(0, 2).map((quest, index) => {
 						const imagePath = `/quest_Image/quest-${index}.jpg`;
 
-						return (
-							<QuestCard
-								key={index}
-								questImage={imagePath}
-								title={quest.title}
-								tags={quest.tags}
-								memberCount={quest.memberCount}
-								date={quest.date}
-								distance={quest.distance}
-							/>
-						);
-					})}
-				</div>
-				<hr className="divider"/>
-				<div className="completedQuests">
-					<div className="sectionTitle">
-						<h3>COMPLETED</h3>
-						<p>View All</p>
-					</div>
-					<div className="displayQuests"></div>
-					{quests.slice(3, 6).map((quest, index) => {
-						const imagePath = `/quest_Image/quest-${index}.jpg`;
+                        return (
+                            <Link
+                                key={quest.id}
+                                href={`/quest-detail/${quest.id}`}
+                                passHref
+                            >
+                                <QuestCard
+                                    //key={index}
+                                    id={quest.id}
+                                    questImage={imagePath}
+                                    title={quest.title}
+                                    tags={quest.tags}
+                                    memberCount={quest.memberCount}
+                                    date={quest.date}
+                                    distance={quest.distance}
+                                />
+                            </Link>
+                        );
+                    })}
+                </div>
+                <hr className="divider" />
+                <div className="completedQuests">
+                    <div className="sectionTitle">
+                        <h3>COMPLETED</h3>
+                        <p>View All</p>
+                    </div>
+                    <div className="displayQuests"></div>
+                    {quests.slice(3, 6).map((quest, index) => {
+                        const imagePath = `/quest_Image/quest-${index}.jpg`;
 
 						return (
 							<QuestCard

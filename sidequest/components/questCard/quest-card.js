@@ -2,8 +2,10 @@ import styles from "@/components/questCard/quest-card.module.css";
 import Tags from "@/components/questTag/quest-tag";
 import QuestStatus from "@/components/questStatus/quest-status";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function QuestCard({
+	id,
 	questImage,
 	title,
 	tags,
@@ -37,52 +39,54 @@ export default function QuestCard({
 	}, [date]);
 
 	return (
-		<div className={styles.cardBody}>
-			<div className={styles.mainBody}>
-				<img className={styles.questImage} src={questImage} alt={title} />
-				<div className={styles.mainContent}>
-					<div className={styles.cardTitle}>
-						<h2 className={styles.titleText}>{title}</h2>
-						<img
-							className={styles.saveforlater}
-							src="/Icons/Save for later.svg"
-						/>
-					</div>
-					<div className={styles.cardTags}>
-						{tags.map((tag, index) => (
-							<Tags key={index} tagName={tag} />
-						))}
-					</div>
-					<div className={styles.cardDetails}>
-						<div className={styles.memberCount}>
+		<Link href={`/quest-detail/${id}`} passHref>
+			<div className={styles.cardBody}>
+				<div className={styles.mainBody}>
+					<img className={styles.questImage} src={questImage} alt={title} />
+					<div className={styles.mainContent}>
+						<div className={styles.cardTitle}>
+							<h2 className={styles.titleText}>{title}</h2>
 							<img
-								className={styles.questMember}
-								src="/Icons/questMembers.svg"
+								className={styles.saveforlater}
+								src="/Icons/Save for later.svg"
 							/>
-							{memberCount}
 						</div>
-
-						{isHydrated && isEndingSoon && (
-							<div className="questStatus">
-								<QuestStatus />
+						<div className={styles.cardTags}>
+							{tags.map((tag, index) => (
+								<Tags key={index} tagName={tag} />
+							))}
+						</div>
+						<div className={styles.cardDetails}>
+							<div className={styles.memberCount}>
+								<img
+									className={styles.questMember}
+									src="/Icons/questMembers.svg"
+								/>
+								{memberCount}
 							</div>
-						)}
+
+							{isHydrated && isEndingSoon && (
+								<div className="questStatus">
+									<QuestStatus />
+								</div>
+							)}
+						</div>
+					</div>
+				</div>
+				<div className={styles.footerBody}>
+					<div className={styles.questDate}>
+						<img className={styles.DateCalender} src="/Icons/questDate.svg" />
+						{isHydrated ? formattedDate : ""}
+					</div>
+					<div className={styles.questDistance}>
+						<img
+							className={styles.questLocation}
+							src="/Icons/questLocation.svg"
+						/>
+						{distance}
 					</div>
 				</div>
 			</div>
-			<div className={styles.footerBody}>
-				<div className={styles.questDate}>
-					<img className={styles.DateCalender} src="/Icons/questDate.svg" />
-					{isHydrated ? formattedDate : ""}
-				</div>
-				<div className={styles.questDistance}>
-					<img
-						className={styles.questLocation}
-						src="/Icons/questLocation.svg"
-					/>
-					{distance}
-				</div>
-			</div>
-		</div>
+		</Link>
 	);
 }
