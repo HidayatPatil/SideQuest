@@ -25,13 +25,13 @@ export default function Home() {
 						const imagePath = `/quest_Image/quest-${index}.jpg`;
 
                         return (
-                            <Link
-                                key={quest.id}
-                                href={`/quest-detail/${quest.id}`}
-                                passHref
-                            >
+                            // <Link
+                            //     key={quest.id}
+                            //     href={`/quest-detail/${quest.id}`}
+                            //     passHref
+                            // > </Link>
                                 <QuestCard
-                                    //key={index}
+                                    key={index}
                                     id={quest.id}
                                     questImage={imagePath}
                                     title={quest.title}
@@ -40,7 +40,6 @@ export default function Home() {
                                     date={quest.date}
                                     distance={quest.distance}
                                 />
-                            </Link>
                         );
                     })}
                 </div>

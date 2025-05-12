@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
-import ProfileCard from "@/components/profile-card";
-import Tags from "@/components/quest-tag";
+import ProfileCard from "@/components/profileCard/profile-card";
+import Tags from "@/components/questTag/quest-tag"
 import quests from "@/data/quest-card-data";
-import QuestStatus from "@/components/quest-status";
+import QuestStatus from "@/components/questStatus/quest-status";
 //import Link from "next/link";
 
 const tags = [
@@ -18,7 +18,7 @@ export default function QuestDetail() {
 
     const router = useRouter();
     const { id } = router.query; // Get the index????
-    const quest = quests[index]; // Get the quest data based on the index
+    const quest = quests[id]; // Get the quest data based on the index
 
     const imagePath = `/quest_Image/quest-${id}.jpg`;
 
@@ -30,14 +30,14 @@ export default function QuestDetail() {
                     src={imagePath}
                     alt={quest.title}
                 />
-                <div className="dateCalender">{quests.date}</div>
+                <div className="dateCalender">{quest.date}</div>
                 <div className="sectionTitle">
-                    <h3>{quests.title}</h3>
+                    <h3>{quest.title}</h3>
                 </div>
             </div>
 
             <div className="questDetailBody">
-                <h1>{quests.title}</h1>
+                <h1>{quest.title}</h1>
                 <p className="questDescription">
                     Join us for a scenic 5-mile hike through lush forests and
                     stunning viewpoints. This is a casual-paced hike suitable
@@ -47,7 +47,7 @@ export default function QuestDetail() {
             </div>
 
             <div className="cardTags">
-                {quests?.tags?.map((tag, index) => (
+                {quest?.tags?.map((tag, index) => (
                     <Tags
                         key={index}
                         tagName={tag}

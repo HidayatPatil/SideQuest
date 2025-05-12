@@ -37,9 +37,9 @@ export default function QuestCard({
 			})
 		);
 	}, [date]);
-
+// sidequest/pages/quest-detail/[id].js
 	return (
-		<Link href={`/quest-detail/${id}`} passHref>
+		<Link key={id} href={`/quest-detail/${id}`} passHref>
 			<div className={styles.cardBody}>
 				<div className={styles.mainBody}>
 					<img className={styles.questImage} src={questImage} alt={title} />
