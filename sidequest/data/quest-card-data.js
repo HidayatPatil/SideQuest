@@ -17,7 +17,7 @@ const quests = [
         distance: "2Km",
         date: "01 May 2025",
         isLiked: false,
-		desc: "Join us for a fun-filled day of beach volleyball and socializing. We'll have games for all skill levels, followed by a sunset gathering with snacks and drinks. Bring your friends and good vibes!",
+        desc: "Join us for a fun-filled day of beach volleyball and socializing. We'll have games for all skill levels, followed by a sunset gathering with snacks and drinks. Bring your friends and good vibes!",
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ const quests = [
         distance: "1Km",
         date: "18 May 2025",
         isLiked: false,
-		desc: "Explore the culinary delights of downtown with a guided food crawl. We'll visit several local eateries, sampling their best dishes and drinks. Perfect for food lovers and adventurers alike!",
+        desc: "Explore the culinary delights of downtown with a guided food crawl. We'll visit several local eateries, sampling their best dishes and drinks. Perfect for food lovers and adventurers alike!",
     },
     {
         id: 3,
@@ -37,7 +37,7 @@ const quests = [
         distance: "500m",
         date: "09 May 2025",
         isLiked: false,
-		desc: "Unwind indoors with a night of classic and quirky board games, paired with plenty of pizza. It's the perfect laid-back hangout for game lovers."
+        desc: "Unwind indoors with a night of classic and quirky board games, paired with plenty of pizza. It's the perfect laid-back hangout for game lovers.",
     },
     {
         id: 4,
@@ -47,7 +47,7 @@ const quests = [
         distance: "3Km",
         date: "01 May 2025",
         isLiked: false,
-		desc: "Start your day centered with a peaceful yoga and meditation session in the great outdoors. Stretch, breathe, and recharge in a tranquil park setting."
+        desc: "Start your day centered with a peaceful yoga and meditation session in the great outdoors. Stretch, breathe, and recharge in a tranquil park setting.",
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ const quests = [
         distance: "8Km",
         date: "03 May 2025",
         isLiked: false,
-		desc: "Network, code, compete, and have fun."
+        desc: "Network, code, compete, and have fun.",
     },
     {
         id: 6,
@@ -67,7 +67,7 @@ const quests = [
         distance: "4Km",
         date: "06 May 2025",
         isLiked: false,
-		desc: "Capture the city’s best-kept secrets on this guided photography walk. Explore alleys, murals, and urban landscapes with like-minded creatives."
+        desc: "Capture the city’s best-kept secrets on this guided photography walk. Explore alleys, murals, and urban landscapes with like-minded creatives.",
     },
     {
         id: 7,
@@ -77,7 +77,7 @@ const quests = [
         distance: "15Km",
         date: "06 May 2025",
         isLiked: false,
-		desc: "Join us while we try to pet some bears. Perfect for the brave and fearless. We will set up a trap to catch as many bears as we can. Bring your own bear traps.",
+        desc: "Join us while we try to pet some bears. Perfect for the brave and fearless. We will set up a trap to catch as many bears as we can. Bring your own bear traps.",
     },
     {
         id: 8,
@@ -87,7 +87,7 @@ const quests = [
         distance: "2Km",
         date: "30 Apr 2025",
         isLiked: false,
-		desc: "Taste-test your way through a maze of fresh produce, funky cheeses, and that one guy who sells “heirloom carrots” like they’re gold. Bring a tote bag and questionable self-control."
+        desc: "Taste-test your way through a maze of fresh produce, funky cheeses, and that one guy who sells “heirloom carrots” like they’re gold. Bring a tote bag and questionable self-control.",
     },
     {
         id: 9,
@@ -97,7 +97,8 @@ const quests = [
         distance: "1Km",
         date: "22 May 2025",
         isLiked: false,
-		desc: "LETS LOOK AT SOME NAKED STATUES AND PRETEND WE KNOW WHAT THEY MEAN. Join us while we try to pull out the greatest heist of all time. We will steal the Mona Lisa and sell it on the black market. Bring your own getaway car.",
+        desc: "LETS LOOK AT SOME NAKED STATUES AND PRETEND WE KNOW WHAT THEY MEAN. Join us while we try to pull out the greatest heist of all time. We will steal the Mona Lisa and sell it on the black market. Bring your own getaway car.",
+    },
     {
         id: 10,
         title: "Surfing Lessons and Beach Bonfire Social",
@@ -106,7 +107,7 @@ const quests = [
         distance: "20Km",
         date: "25 May 2025",
         isLiked: false,
-		desc: "Please don't drown. WE WILL NOT BE RESPONSIBLE FOR YOUR LIFE. Join us while we try to surf the biggest waves in the world. Bring your own surfboard and a life jacket.",
+        desc: "Please don't drown. WE WILL NOT BE RESPONSIBLE FOR YOUR LIFE. Join us while we try to surf the biggest waves in the world. Bring your own surfboard and a life jacket.",
     },
     {
         id: 11,
@@ -116,7 +117,7 @@ const quests = [
         distance: "2Km",
         date: "10 May 2025",
         isLiked: false,
-		desc: "Jog, wheeze, and high-five your way to a well-earned smoothie. For people who love running... or love saying they went for a run.",
+        desc: "Jog, wheeze, and high-five your way to a well-earned smoothie. For people who love running... or love saying they went for a run.",
     },
     {
         id: 12,
@@ -126,7 +127,7 @@ const quests = [
         distance: "500m",
         date: "21 May 2025",
         isLiked: false,
-		desc: "Sing your heart out, even if your voice sounds like a blender full of rocks. No judgment here—just good tunes and bad choices.",
+        desc: "Sing your heart out, even if your voice sounds like a blender full of rocks. No judgment here—just good tunes and bad choices.",
     },
     {
         id: 13,
@@ -136,7 +137,7 @@ const quests = [
         distance: "7Km",
         date: "09 May 2025",
         isLiked: false,
-		desc: "Get your steps in while arguing over whether that plant is poison ivy. Ends in sandwiches and stories, hopefully not first-aid.",
+        desc: "Get your steps in while arguing over whether that plant is poison ivy. Ends in sandwiches and stories, hopefully not first-aid.",
     },
     {
         id: 14,
@@ -146,7 +147,7 @@ const quests = [
         distance: "1Km",
         date: "04 May 2025",
         isLiked: false,
-		desc: "BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER",
+        desc: "BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER BEER",
     },
     {
         id: 15,
@@ -156,7 +157,7 @@ const quests = [
         distance: "3Km",
         date: "21 May 2025",
         isLiked: false,
-		desc: "Bring your favorite dish and enjoy a day of food, fun, and friendship in the beautiful botanical gardens. Perfect for foodies and nature lovers alike.",
+        desc: "Bring your favorite dish and enjoy a day of food, fun, and friendship in the beautiful botanical gardens. Perfect for foodies and nature lovers alike.",
     },
     {
         id: 16,
@@ -166,7 +167,7 @@ const quests = [
         distance: "2Km",
         date: "23 May 2025",
         isLiked: false,
-		desc: "Roll your own sushi and your self-esteem—both will fall apart at first. But hey, it still tastes great and comes with a side of bragging rights.",
+        desc: "Roll your own sushi and your self-esteem—both will fall apart at first. But hey, it still tastes great and comes with a side of bragging rights.",
     },
     {
         id: 17,
@@ -176,7 +177,7 @@ const quests = [
         distance: "5Km",
         date: "23 May 2025",
         isLiked: false,
-		desc: "Channel your inner mountain goat and cling to a wall like your social life depends on it. Grunting is encouraged.",
+        desc: "Channel your inner mountain goat and cling to a wall like your social life depends on it. Grunting is encouraged.",
     },
     {
         id: 18,
@@ -186,7 +187,7 @@ const quests = [
         distance: "2Km",
         date: "03 May 2025",
         isLiked: false,
-		desc: "Unleash your inner detective, Think: Amazing Race, but more chaotic.",
+        desc: "Unleash your inner detective, Think: Amazing Race, but more chaotic.",
     },
     {
         id: 19,
@@ -196,7 +197,7 @@ const quests = [
         distance: "500m",
         date: "24 May 2025",
         isLiked: false,
-		desc: "Snap if you vibe, sip if you're shy, and read your poem if you're brave. Deep feelings and accidental rhymes await.",
+        desc: "Snap if you vibe, sip if you're shy, and read your poem if you're brave. Deep feelings and accidental rhymes await.",
     },
 ];
 

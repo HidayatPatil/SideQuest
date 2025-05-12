@@ -12,9 +12,9 @@ body {
 }
 
 .homePage {
-	display: flex;
-	flex-direction: column;
-	gap: 126px;
+    display: flex;
+    flex-direction: column;
+    gap: 126px;
 }
 
 .userProfileData {
@@ -82,50 +82,52 @@ body {
 }
 
 /* -------------------------Quest Board---------------------------- */
-.questBoardContainer {
-	height: 100vh;
-	/* overflow: hidden; 🔒 Prevent scrolling */
-	display: flex;
-	flex-direction: column;
+.questBoardContainer,
+.questDetailContainer {
+    height: 100vh;
+    /* overflow: hidden; 🔒 Prevent scrolling */
+    display: flex;
+    flex-direction: column;
 }
 
-.questboardPage {
-	margin-top: 44px;
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-	/* overflow-y: auto; */
+.questboardPage,
+.questDetailPage {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* overflow-y: auto; */
 }
 
 .boardHeader {
-	background-color: white;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	padding-top: 16px;
-	gap: 16px;
-	overflow-y: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 16px;
+    gap: 16px;
+    overflow-y: auto;
 
-	position: sticky;
-	top: 0;
-	z-index: 1; 
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .boardHeader h1 {
-	color: var(--BLACK, #0c0b0b);
-	text-align: center;
-	font-size: 24px;
-	font-weight: 600;
+    color: var(--BLACK, #0c0b0b);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .boardActions {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	gap: 12px;
-	position: sticky;
-	top: 0;
-	z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
