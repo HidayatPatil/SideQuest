@@ -30,21 +30,21 @@ export default function QuestDetail() {
                 <div className="questDetailBody">
                     <h1>{quest.title}</h1>
                     <p className="questDescription">{quest.desc}</p>
-                </div>
 
-                <div className="cardTags">
-                    {quest?.tags?.map((tag, index) => (
-                        <Tags
-                            key={index}
-                            tagName={tag}
-                        />
-                    ))}
+                    <div className="cardTags">
+                        {quest?.tags?.map((tag, index) => (
+                            <Tags
+                                key={index}
+                                tagName={tag}
+                            />
+                        ))}
+                    </div>
                 </div>
 
                 <div className="sectionTitle">
                     <h3>QUEST MASTER</h3>
                 </div>
-                <div className="profileCard">
+                <div className="userProfileData">
                     <ProfileCard />
                 </div>
 
