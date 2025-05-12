@@ -47,6 +47,7 @@ export default function QuestBoard() {
 							return (
 								<QuestCard
 									key={index}
+									id={quest.id}
 									questImage={imagePath}
 									title={quest.title}
 									tags={quest.tags}

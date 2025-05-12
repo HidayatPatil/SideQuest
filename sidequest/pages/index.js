@@ -44,7 +44,6 @@ export default function Home() {
                 <div className="completedQuests">
                     <div className="sectionTitle">
                         <h3>COMPLETED</h3>
-                        <p>View All</p>
                     </div>
                     <div className="displayQuests"></div>
                     {quests.slice(3, 6).map((quest) => {
