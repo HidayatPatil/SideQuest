@@ -25,14 +25,12 @@ export default function Home() {
                         <h3>UPCOMING QUESTS</h3>
                     </div>
                     <div className="displayQuests"></div>
-                    {quests.slice(0, 2).map((quest, index) => {
-                        const imagePath = `/quest_Image/quest-${index}.jpg`;
-
+                    {quests.slice(0, 2).map((quest) => {
                         return (
                             <QuestCard
                                 key={quest.id}
                                 id={quest.id}
-                                questImage={imagePath}
+                                img={quest.img}
                                 title={quest.title}
                                 tags={quest.tags}
                                 memberCount={quest.memberCount}
@@ -49,14 +47,12 @@ export default function Home() {
                         <p>View All</p>
                     </div>
                     <div className="displayQuests"></div>
-                    {quests.slice(3, 6).map((quest, index) => {
-                        const imagePath = `/quest_Image/quest-${index}.jpg`;
-
+                    {quests.slice(3, 6).map((quest) => {
                         return (
                             <QuestCard
                                 key={quest.id}
                                 id={quest.id}
-                                questImage={imagePath}
+                                img={quest.img}
                                 title={quest.title}
                                 tags={quest.tags}
                                 memberCount={quest.memberCount}

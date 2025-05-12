@@ -1,6 +1,7 @@
 const quests = [
     {
         id: 0,
+		    img: "/quest_Image/quest-0.jpg",
         title: "Weekend Whistler Mountain Hiking Adventure",
         tags: ["Hiking", "Outdoor", "+2"],
         memberCount: "3/6",
@@ -11,6 +12,7 @@ const quests = [
     },
     {
         id: 1,
+        img: "/quest_Image/quest-1.jpg",
         title: "Beach Volleyball Meetup and Sunset Gathering",
         tags: ["Sports", "Beach", "Fun"],
         memberCount: "5/10",
@@ -21,6 +23,7 @@ const quests = [
     },
     {
         id: 2,
+        img: "/quest_Image/quest-2.jpg",
         title: "Downtown Food Crawl Through the Best Local Eats",
         tags: ["Food", "Social", "City"],
         memberCount: "8/12",
@@ -31,6 +34,7 @@ const quests = [
     },
     {
         id: 3,
+        img: "/quest_Image/quest-3.jpg",
         title: "Late Night Board Games and Pizza Party",
         tags: ["Games", "Chill", "Indoor"],
         memberCount: "4/6",
@@ -41,6 +45,7 @@ const quests = [
     },
     {
         id: 4,
+        img: "/quest_Image/quest-4.jpg",
         title: "Morning Yoga and Meditation Session in the Park",
         tags: ["Fitness", "Outdoor", "Health"],
         memberCount: "7/15",
@@ -51,6 +56,7 @@ const quests = [
     },
     {
         id: 5,
+        img: "/quest_Image/quest-5.jpg",
         title: "48-Hour Coding Hackathon and Tech Expo",
         tags: ["Tech", "Competition", "Fun"],
         memberCount: "10/20",
@@ -61,6 +67,7 @@ const quests = [
     },
     {
         id: 6,
+        img: "/quest_Image/quest-6.jpg",
         title: "Photography Walk Exploring Hidden City Gems",
         tags: ["Photography", "Art", "Outdoor"],
         memberCount: "6/10",
@@ -71,6 +78,7 @@ const quests = [
     },
     {
         id: 7,
+        img: "/quest_Image/quest-7.jpg",
         title: "Weekend Camping Trip to National Forest Reserve",
         tags: ["Camping", "Nature", "Adventure"],
         memberCount: "5/8",
@@ -81,6 +89,7 @@ const quests = [
     },
     {
         id: 8,
+        img: "/quest_Image/quest-8.jpg",
         title: "Local Farmers Market Guided Walking Tour",
         tags: ["Food", "Local", "Chill"],
         memberCount: "9/12",
@@ -91,6 +100,7 @@ const quests = [
     },
     {
         id: 9,
+        img: "/quest_Image/quest-9.jpg",
         title: "Art Museum Visit with Private Gallery Tour",
         tags: ["Art", "Culture", "Indoor"],
         memberCount: "4/10",
@@ -101,6 +111,7 @@ const quests = [
     },
     {
         id: 10,
+        img: "/quest_Image/quest-10.jpg",
         title: "Surfing Lessons and Beach Bonfire Social",
         tags: ["Water", "Adventure", "Sports"],
         memberCount: "6/8",
@@ -111,6 +122,7 @@ const quests = [
     },
     {
         id: 11,
+        img: "/quest_Image/quest-11.jpg",
         title: "Evening Run Club and Post-Run Smoothies",
         tags: ["Running", "Fitness", "Outdoor"],
         memberCount: "5/15",
@@ -121,6 +133,7 @@ const quests = [
     },
     {
         id: 12,
+        img: "/quest_Image/quest-12.jpg",
         title: "Karaoke Night Extravaganza at Local Pub",
         tags: ["Music", "Party", "Fun"],
         memberCount: "12/20",
@@ -131,6 +144,7 @@ const quests = [
     },
     {
         id: 13,
+        img: "/quest_Image/quest-13.jpg",
         title: "Nature Hike Along the River and Picnic Lunch",
         tags: ["Nature", "Adventure", "Hiking"],
         memberCount: "7/10",
@@ -141,6 +155,7 @@ const quests = [
     },
     {
         id: 14,
+        img: "/quest_Image/quest-14.jpg",
         title: "Craft Beer Tasting and Brewery Tour Experience",
         tags: ["Drinks", "Social", "Local"],
         memberCount: "10/12",
@@ -151,6 +166,7 @@ const quests = [
     },
     {
         id: 15,
+        img: "/quest_Image/quest-15.jpg",
         title: "Potluck Picnic Party at City Botanical Gardens",
         tags: ["Food", "Friends", "Outdoor"],
         memberCount: "8/10",
@@ -161,6 +177,7 @@ const quests = [
     },
     {
         id: 16,
+        img: "/quest_Image/quest-16.jpg",
         title: "Sushi Making Workshop and Dinner Celebration",
         tags: ["Food", "Workshop", "Indoor"],
         memberCount: "5/8",
@@ -171,6 +188,7 @@ const quests = [
     },
     {
         id: 17,
+        img: "/quest_Image/quest-17.jpg",
         title: "Indoor Rock Climbing Session for All Levels",
         tags: ["Sports", "Fitness", "Challenge"],
         memberCount: "4/6",
@@ -181,6 +199,7 @@ const quests = [
     },
     {
         id: 18,
+        img: "/quest_Image/quest-18.jpg",
         title: "Citywide Scavenger Hunt with Mystery Challenges",
         tags: ["Adventure", "City", "Fun"],
         memberCount: "9/15",
@@ -191,6 +210,7 @@ const quests = [
     },
     {
         id: 19,
+        img: "/quest_Image/quest-19.jpg",
         title: "Open Mic Poetry Night Featuring Local Artists",
         tags: ["Poetry", "Art", "Indoor"],
         memberCount: "6/12",
