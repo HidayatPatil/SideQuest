@@ -5,7 +5,7 @@ import Tags from "@/components/quest-tag";
 import QuestStatus from "./quest-status";
 
 export default function QuestCard({
-	id,
+    id,
     questImage,
     title,
     tags,
@@ -19,21 +19,19 @@ export default function QuestCard({
     const [isClient, setIsClient] = useState(false); //date on client side?
 
     useEffect(() => {
-        setIsClient(true); 
+        setIsClient(true);
     }, []);
 
     useEffect(() => {
-			const today = new Date();
-			const questDate = new Date(date);
-			const dayDiff = Math.floor((questDate - today) / (1000 * 60 * 60 * 24));
-			setShouldShowStatus(dayDiff <= 2 && dayDiff >= 0);
-    	}, [date]);
+        const today = new Date();
+        const questDate = new Date(date);
+        const dayDiff = Math.floor((questDate - today) / (1000 * 60 * 60 * 24));
+        setShouldShowStatus(dayDiff <= 2 && dayDiff >= 0);
+    }, [date]);
 
     return (
-            <div className={styles.cardBody}>
-				<Link
-            	href={`/quest-detail/${id}`}
-        		>
+        <div className={styles.cardBody}>
+            <Link href={`/quest-detail/${id}`}>
                 <div className={styles.mainBody}>
                     <img
                         className={styles.questImage}
@@ -92,7 +90,7 @@ export default function QuestCard({
                         {distance}
                     </div>
                 </div>
-				</Link>
-            </div>
+            </Link>
+        </div>
     );
 }
