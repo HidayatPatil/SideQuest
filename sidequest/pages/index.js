@@ -3,7 +3,7 @@ import ProfileCard from "@/components/profileCard/profile-card";
 import QuestCard from "@/components/questCard/quest-card";
 import Link from "next/link";
 import quests from "@/data/quest-card-data";
-import Button from "@/components/button";
+import Button from "@/components/button/button";
 import NavBar from "@/components/navBar/nav-bar";
 
 export default function Home() {

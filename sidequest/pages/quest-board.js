@@ -57,9 +57,9 @@ export default function QuestBoard() {
 							);
 						})}
 					</div> */}
-				</div>
-			</div>
-			<NavBar />
-		</div>
-	);
+                </div>
+            </div>
+            <NavBar />
+        </div>
+    );
 }

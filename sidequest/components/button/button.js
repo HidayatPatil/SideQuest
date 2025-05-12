@@ -1,5 +1,5 @@
 //import Link from "next/link";
-import styles from "@/components/button.module.css";
+import styles from "@/components/button/button.module.css";
 
 export default function Button({
     text,
