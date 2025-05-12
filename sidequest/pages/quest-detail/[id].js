@@ -1,21 +1,12 @@
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import ProfileCard from "@/components/profileCard/profile-card";
-import Tags from "@/components/questTag/quest-tag"
+import Tags from "@/components/questTag/quest-tag";
 import quests from "@/data/quest-card-data";
 import QuestStatus from "@/components/questStatus/quest-status";
+import Button from "@/components/button";
 //import Link from "next/link";
 
-const tags = [
-    "Hiking",
-    "Nature Trail",
-    "Mountains",
-    "Exercise",
-    "Outdoor",
-    "Adventure",
-];
-
 export default function QuestDetail() {
-
     const router = useRouter();
     const { id } = router.query; // Get the index????
     const quest = quests[id]; // Get the quest data based on the index
