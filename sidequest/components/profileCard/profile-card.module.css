@@ -1,37 +1,36 @@
 .profileContainer {
-	width: auto;
-	margin: 0 16px;
-	font-family: Rubik;
-
+    width: auto;
+    margin: 0 16px;
+    font-family: Rubik;
 }
 
 .profileMain {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 16px;
-	width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
     height: 128px;
-	padding: 12px 16px 16px 16px;
-	border-radius: 12px;
-	border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
-	background: var(--WHITE, #fff);
+    padding: 12px 16px 16px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+    background: var(--WHITE, #fff);
 
-	/* Secondary100-Shadow */
-	box-shadow: 0px 4px 0px 0px #d6d3d2;
+    /* Secondary100-Shadow */
+    box-shadow: 0px 4px 0px 0px #d6d3d2;
 }
 
 .profileImage {
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100px;
 }
 
 .profileContent {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
 }
@@ -39,11 +38,18 @@
 .profileData {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 4px;
+}
+
+.userIcon {
+    width: 20px;
+    height: 20px;
 }
 
 .userIdentification {
     display: flex;
+    align-items: flex-end;
     flex-direction: row;
     gap: 8px;
 }
@@ -52,18 +58,63 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.userRating {
+    display: flex;
+    padding: 2px 8px;
+    gap: 4px;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--Primary-primary-50, #e2effd);
+    color: var(--Primary-primary-700, #2d71b5);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
 }
 
 .userName {
-	color: var(--BLACK, #0C0B0B);
-	text-align: center;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 24px; 
+    color: var(--BLACK, #0c0b0b);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }
 
+.userID {
+    color: var(--Secondary-secondary-400, #8a827a);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
 
+.userRole {
+    color: var(--BLACK, #0c0b0b);
+    font-size: 16px;
+    line-height: 20px;
+}
 
+.leveling {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 12px;
+    text-align: right;
+}
 
+.levelProgress {
+    height: 8px;
+    background: var(--Primary-primary-BASE, #3f9fff);
+    border-radius: 4px;
+    width: 75%;
+}
 
+.levelBar {
+    height: 8px;
+    align-self: stretch;
+    background: var(--Secondary-secondary-50, #edecec);
+    border-radius: 4px;
+}
