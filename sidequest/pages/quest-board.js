@@ -26,19 +26,20 @@ export default function QuestBoard() {
 				</div>
 				<div className="questSection">
 					<div className="exploreQuests">
-								<>
-									{filteredQuests.map((quest, index) => (
-										<QuestCard
-											key={index}
-											img={quest.img}
-											title={quest.title}
-											tags={quest.tags}
-											memberCount={quest.memberCount}
-											date={quest.date}
-											distance={quest.distance}
-										/>
-									))}
-								</>
+						<>
+							{filteredQuests.map((quest, index) => (
+								<QuestCard
+									key={quest.id}
+									id={quest.id}
+									img={quest.img}
+									title={quest.title}
+									tags={quest.tags}
+									memberCount={quest.memberCount}
+									date={quest.date}
+									distance={quest.distance}
+								/>
+							))}
+						</>
 					</div>
 					{/* <div className="savedQuests">
 						{quests.map((quest, index) => {
@@ -46,21 +47,21 @@ export default function QuestBoard() {
 
 							return (
 								<QuestCard
-									key={index}
-									id={quest.id}
-									questImage={imagePath}
-									title={quest.title}
-									tags={quest.tags}
-									memberCount={quest.memberCount}
-									date={quest.date}
-									distance={quest.distance}
-								/>
+																key={quest.id}
+																id={quest.id}
+																img={quest.img}
+																title={quest.title}
+																tags={quest.tags}
+																memberCount={quest.memberCount}
+																date={quest.date}
+																distance={quest.distance}
+															/>
 							);
 						})}
 					</div> */}
-                </div>
-            </div>
-            <NavBar />
-        </div>
-    );
+				</div>
+			</div>
+			<NavBar />
+		</div>
+	);
 }
