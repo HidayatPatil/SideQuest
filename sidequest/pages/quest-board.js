@@ -19,7 +19,7 @@ export default function QuestBoard() {
 				</div>
 				<div className="questSection">
 					<div className="exploreQuests">
-						{quests.splice(0, 6).map((quest, index) => {
+						{quests.slice(0, 6).map((quest, index) => {
 							const imagePath = `/quest_Image/quest-${index}.jpg`;
 
 							return (

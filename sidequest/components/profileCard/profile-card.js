@@ -1,4 +1,5 @@
 import styles from "@/components/profileCard/profile-card.module.css";
+import Link from "next/link";
 
 export default function ProfileCard() {
 	return (

@@ -11,15 +11,29 @@ export default function QuestCard({
 	date,
 	distance,
 }) {
-	// show ending soon status
-	const [shouldShowStatus, setShouldShowStatus] = useState(false);
+	const [isHydrated, setIsHydrated] = useState(false);
+	const [isEndingSoon, setIsEndingSoon] = useState(false);
+	const [formattedDate, setFormattedDate] = useState("");
 
 	useEffect(() => {
-		const today = new Date();
+		setIsHydrated(true);
+
 		const questDate = new Date(date);
-		const dayDiff = Math.floor((questDate - today) / (1000 * 60 * 60 * 24));
-		const show = dayDiff <= 2 && dayDiff >= 0;
-		setShouldShowStatus(show);
+		questDate.setHours(0, 0, 0, 0);
+
+		const currentDate = new Date();
+		currentDate.setHours(0, 0, 0, 0);
+
+		const diff = Math.floor((questDate - currentDate) / (1000 * 60 * 60 * 24));
+		setIsEndingSoon(diff >= 0 && diff <= 2);
+
+		setFormattedDate(
+			questDate.toLocaleDateString("en-GB", {
+				day: "2-digit",
+				month: "short",
+				year: "numeric",
+			})
+		);
 	}, [date]);
 
 	return (
@@ -47,22 +61,19 @@ export default function QuestCard({
 							/>
 							{memberCount}
 						</div>
-						{/* calling status function! */}
-						{shouldShowStatus && (
-							<div className={styles.questStatus}>
+
+						{isHydrated && isEndingSoon && (
+							<div className="questStatus">
 								<QuestStatus />
 							</div>
 						)}
-						{/* <div className={styles.questStatus}>
-							<QuestStatus />
-						</div> */}
 					</div>
 				</div>
 			</div>
 			<div className={styles.footerBody}>
 				<div className={styles.questDate}>
 					<img className={styles.DateCalender} src="/Icons/questDate.svg" />
-					{date}
+					{isHydrated ? formattedDate : ""}
 				</div>
 				<div className={styles.questDistance}>
 					<img
