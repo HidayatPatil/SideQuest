@@ -1,108 +1,132 @@
-import styles from "@/components/questCard/quest-card.module.css";
-import Tags from "@/components/questTag/quest-tag";
-import QuestStatus from "@/components/questStatus/quest-status";
 import { useEffect, useState } from "react";
+import styles from "@/components/questCard/quest-card.module.css";
+import QuestTags from "@/components/questTag/quest-tag";
+import QuestStatus from "@/components/questStatus/quest-status";
 import Link from "next/link";
 
 export default function QuestCard({
-    id,
-    img,
-    title,
-    tags,
-    memberCount,
-    date,
-    distance,
+	id,
+	img,
+	title,
+	tags,
+	memberCount,
+	date,
+	distance,
+	isLiked,
+	toggleLike,
 }) {
-    const [isHydrated, setIsHydrated] = useState(false);
-    const [isEndingSoon, setIsEndingSoon] = useState(false);
-    const [formattedDate, setFormattedDate] = useState("");
+	const [liked, setLiked] = useState(isLiked);
+	const [removing, setRemoving] = useState(false); // ⬅️ for card disappearance delay
 
-    useEffect(() => {
-        setIsHydrated(true);
+	// Update local liked state when prop changes
+	useEffect(() => {
+		setLiked(isLiked);
+	}, [isLiked]);
 
-        const questDate = new Date(date);
-        questDate.setHours(0, 0, 0, 0);
+	const handleLikeClick = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
 
-        const currentDate = new Date();
-        currentDate.setHours(0, 0, 0, 0);
+		setLiked(!liked); // icon changes immediately
+		toggleLike(); // actual removal happens after 500ms (in parent)
+	};
 
-        const diff = Math.floor(
-            (questDate - currentDate) / (1000 * 60 * 60 * 24)
-        );
-        setIsEndingSoon(diff >= 0 && diff <= 2);
+	const [isHydrated, setIsHydrated] = useState(false);
+	const [isEndingSoon, setIsEndingSoon] = useState(false);
+	const [formattedDate, setFormattedDate] = useState("");
 
-        setFormattedDate(
-            questDate.toLocaleDateString("en-GB", {
-                day: "2-digit",
-                month: "short",
-                year: "numeric",
-            })
-        );
-    }, [date]);
-    // sidequest/pages/quest-detail/[id].js
-    return (
-        <Link
-            key={id}
-            href={`/quest-detail/${id}`}
-            passHref
-        >
-            <div className={styles.cardBody}>
-                <div className={styles.mainBody}>
-                    <img
-                        className={styles.questImage}
-                        src={img}
-                        alt={title}
-                    />
-                    <div className={styles.mainContent}>
-                        <div className={styles.cardTitle}>
-                            <h2 className={styles.titleText}>{title}</h2>
-                            <img
-                                className={styles.saveforlater}
-                                src="/Icons/Save for later.svg"
-                            />
-                        </div>
-                        <div className={styles.cardTags}>
-                            {tags.map((tag, index) => (
-                                <Tags
-                                    key={index}
-                                    tagName={tag}
-                                />
-                            ))}
-                        </div>
-                        <div className={styles.cardDetails}>
-                            <div className={styles.memberCount}>
-                                <img
-                                    className={styles.questMember}
-                                    src="/Icons/questMembers.svg"
-                                />
-                                {memberCount}
-                            </div>
+	useEffect(() => {
+		setIsHydrated(true);
 
-                            {isHydrated && isEndingSoon && (
-                                <div className="questStatus">
-                                    <QuestStatus />
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.footerBody}>
-                    <div className={styles.questDate}>
-                        <img
-                            className={styles.DateCalender}
-                            src="/Icons/questDate.svg"
-                        />
-                        {isHydrated ? formattedDate : ""}
-                    </div>
-                    <div className={styles.questDistance}>
-                        <img
-                            className={styles.questLocation}
-                            src="/Icons/questLocation.svg"
-                        />
-                        {distance}
-                    </div>
-                </div>
-            </div>
-        </Link>
-    );
+		const questDate = new Date(date);
+		questDate.setHours(0, 0, 0, 0);
+		const currentDate = new Date();
+		currentDate.setHours(0, 0, 0, 0);
+		const timeDiff = Math.floor(
+			(questDate - currentDate) / (1000 * 60 * 60 * 24)
+		);
+
+		setIsEndingSoon(timeDiff >= 0 && timeDiff <= 2);
+
+		setFormattedDate(
+			questDate.toLocaleDateString("en-GB", {
+				day: "2-digit",
+				month: "short",
+				year: "numeric",
+			})
+		);
+	}, [date]);
+
+	if (removing) {
+		return null; // ⬅️ hide the card visually after icon is shown
+	}
+
+	return (
+		<div className={styles.cardBody}>
+			<div className={styles.mainBody}>
+				<Link
+					className={styles.questImage}
+					href={`/quest-detail/${id}`}
+					passHref
+				>
+					<img className={styles.questImage} src={img} alt={title} />
+				</Link>
+				<div className={styles.mainContent}>
+					<div className={styles.cardTitle}>
+						<Link href={`/quest-detail/${id}`} passHref>
+							<h2 className={styles.titleText}>{title}</h2>
+						</Link>
+						<img
+							className={styles.saveforlater}
+							src={
+								liked
+									? "/Icons/Save for later_active.svg"
+									: "/Icons/Save for later.svg"
+							}
+							onClick={handleLikeClick}
+							alt="Save for later"
+						/>
+					</div>
+					<Link href={`/quest-detail/${id}`} passHref>
+						<div className={styles.cardTags}>
+							{tags.map((tag, index) => (
+								<QuestTags key={index} tagName={tag} />
+							))}
+						</div>
+					</Link>
+					<Link href={`/quest-detail/${id}`} passHref>
+						<div className={styles.cardDetails}>
+							<div className={styles.memberCount}>
+								<img
+									className={styles.questMember}
+									src="/Icons/questMembers.svg"
+								/>
+								{memberCount}
+							</div>
+							{isHydrated && isEndingSoon && (
+								<div className="questStatus">
+									<QuestStatus />
+								</div>
+							)}
+						</div>
+					</Link>
+				</div>
+			</div>
+			<Link href={`/quest-detail/${id}`} passHref>
+				<div className={styles.footerBody}>
+					<div className={styles.questDate}>
+						<img className={styles.DateCalender} src="/Icons/questDate.svg" />
+						{isHydrated ? formattedDate : ""}
+					</div>
+					<div className={styles.questDistance}>
+						<img
+							className={styles.questLocation}
+							src="/Icons/questLocation.svg"
+						/>
+						{distance}
+					</div>
+				</div>
+			</Link>
+		</div>
+	);
 }
