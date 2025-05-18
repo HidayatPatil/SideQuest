@@ -32,7 +32,42 @@ const chats = [
         userImg: "/profileImage/Nila.jpg",
         name: "Nila",
         message: "Is anyone else joining the yoga session?",
-        time: "4d ago",
+        time: "12d ago",
+    },
+    {
+        id: 5,
+        userImg: "/profileImage/MayaChat.jpg",
+        name: "Maya",
+        message: "I'm outside your house",
+        time: "21d ago",
+    },
+    {
+        id: 6,
+        userImg: "/profileImage/Jeremy.jpg",
+        name: "Jeremy",
+        message: "I'm outside your house",
+        time: "38d ago",
+    },
+    {
+        id: 7,
+        userImg: "/profileImage/Sara.jpg",
+        name: "Sara",
+        message: "I'm outside your house",
+        time: "44d ago",
+    },
+    {
+        id: 8,
+        userImg: "/profileImage/Alex.jpg",
+        name: "Alex",
+        message: "I'm outside your house",
+        time: "150d ago",
+    },
+    {
+        id: 9,
+        userImg: "/profileImage/Nila.jpg",
+        name: "Nila",
+        message: "Where are you?",
+        time: "502d ago",
     },
 ];
 

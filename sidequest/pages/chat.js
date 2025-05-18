@@ -12,6 +12,17 @@ export default function Chat() {
                 <div className="chatHeader">
                     <h1>Chat Log</h1>
                 </div>
+                {chats.map((chats) => {
+                    return (
+                        <ChatCard
+                            id={chats.id}
+                            userImg={chats.userImg}
+                            name={chats.name}
+                            message={chats.message}
+                            time={chats.time}
+                        />
+                    );
+                })}
             </div>
             <NavBar />
         </div>

@@ -1,4 +1,4 @@
-import styles from "@components/chatCard/chatCard.module.css";
+import styles from "@/components/chatCard/chatCard.module.css";
 import Link from "next/link";
 
 export default function ChatCard({ id, userImg, name, message, time }) {
@@ -14,10 +14,12 @@ export default function ChatCard({ id, userImg, name, message, time }) {
                     alt="User"
                     className={styles.userImg}
                 />
-                <div className={styles.chatContent}>
-                    <div className={styles.userName}>{name}</div>
+                <div className={styles.chatText}>
+                    <div className={styles.chatUser}>
+                        <div className={styles.userName}>{name}</div>
+                        <div className={styles.time}>{time}</div>
+                    </div>
                     <div className={styles.message}>{message}</div>
-                    <div className={styles.time}>{time}</div>
                 </div>
                 <img
                     className={styles.CaretRight}
