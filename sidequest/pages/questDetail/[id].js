@@ -3,7 +3,6 @@ import ProfileCard from "@/components/profileCard/profileCard";
 import QuestTags from "@/components/questTag/questTag";
 import quests from "@/data/questCardData";
 import QuestStatus from "@/components/questStatus/questStatus";
-import StatusBar from "@/components/statusBar/statusBar";
 import Button from "@/components/button/button";
 //import Link from "next/link";
 
@@ -19,7 +18,6 @@ export default function QuestDetail() {
 
 	return (
 		<div className="questDetailContainer">
-			<StatusBar />
 			<div className="questDetailPage">
 				<div className="questDetailHeader">
 					<img className="questImage" src={imagePath} alt={quest.title} />

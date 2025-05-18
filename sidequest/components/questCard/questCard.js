@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "@/components/questCard/questCard.module.css";
 import QuestTags from "@/components/questTag/questTag";
 import QuestStatus from "@/components/questStatus/questStatus";
+import CardVisual from "../cardVisual/cardVisual";
 import Link from "next/link";
 
 export default function QuestCard({
@@ -62,71 +63,71 @@ export default function QuestCard({
 	}
 
 	return (
-		<div className={styles.cardBody}>
-			<div className={styles.mainBody}>
-				<Link
-					className={styles.questImage}
-					href={`/questDetail/${id}`}
-					passHref
-				>
-					<img className={styles.questImage} src={img} alt={title} />
-				</Link>
-				<div className={styles.mainContent}>
-					<div className={styles.cardTitle}>
+		<CardVisual>
+				<div className={styles.mainBody}>
+					<Link
+						className={styles.questImage}
+						href={`/questDetail/${id}`}
+						passHref
+					>
+						<img className={styles.questImage} src={img} alt={title} />
+					</Link>
+					<div className={styles.mainContent}>
+						<div className={styles.cardTitle}>
+							<Link href={`/questDetail/${id}`} passHref>
+								<h2 className={styles.titleText}>{title}</h2>
+							</Link>
+							<img
+								className={styles.cardIcons}
+								src={
+									liked
+										? "/Icons/Save for later_active.svg"
+										: "/Icons/Save for later.svg"
+								}
+								onClick={handleLikeClick}
+								alt="Save for later"
+							/>
+						</div>
 						<Link href={`/questDetail/${id}`} passHref>
-							<h2 className={styles.titleText}>{title}</h2>
-						</Link>
-						<img
-							className={styles.saveforlater}
-							src={
-								liked
-									? "/Icons/Save for later_active.svg"
-									: "/Icons/Save for later.svg"
-							}
-							onClick={handleLikeClick}
-							alt="Save for later"
-						/>
-					</div>
-					<Link href={`/questDetail/${id}`} passHref>
-						<div className={styles.cardTags}>
-							{tags.map((tag, index) => (
-								<QuestTags key={index} tagName={tag} />
-							))}
-						</div>
-					</Link>
-					<Link href={`/questDetail/${id}`} passHref>
-						<div className={styles.cardDetails}>
-							<div className={styles.memberCount}>
-								<img
-									className={styles.questMember}
-									src="/Icons/questMembers.svg"
-								/>
-								{memberCount}
+							<div className={styles.cardTags}>
+								{tags.map((tag, index) => (
+									<QuestTags key={index} tagName={tag} />
+								))}
 							</div>
-							{isHydrated && isEndingSoon && (
-								<div className="questStatus">
-									<QuestStatus />
+						</Link>
+						<Link href={`/questDetail/${id}`} passHref>
+							<div className={styles.cardDetails}>
+								<div className={styles.memberCount}>
+									<img
+										className={styles.cardIcons}
+										src="/Icons/questMembers.svg"
+									/>
+									{memberCount}
 								</div>
-							)}
+								{isHydrated && isEndingSoon && (
+									<div className="questStatus">
+										<QuestStatus />
+									</div>
+								)}
+							</div>
+						</Link>
+					</div>
+				</div>
+				<Link href={`/questDetail/${id}`} passHref>
+					<div className={styles.footerBody}>
+						<div className={styles.questDate}>
+							<img className={styles.cardIcons} src="/Icons/questDate.svg" />
+							{isHydrated ? formattedDate : ""}
 						</div>
-					</Link>
-				</div>
-			</div>
-			<Link href={`/questDetail/${id}`} passHref>
-				<div className={styles.footerBody}>
-					<div className={styles.questDate}>
-						<img className={styles.DateCalender} src="/Icons/questDate.svg" />
-						{isHydrated ? formattedDate : ""}
+						<div className={styles.questDistance}>
+							<img
+								className={styles.cardIcons}
+								src="/Icons/questLocation.svg"
+							/>
+							{distance}
+						</div>
 					</div>
-					<div className={styles.questDistance}>
-						<img
-							className={styles.questLocation}
-							src="/Icons/questLocation.svg"
-						/>
-						{distance}
-					</div>
-				</div>
-			</Link>
-		</div>
+				</Link>
+		</CardVisual>
 	);
 }

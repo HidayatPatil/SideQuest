@@ -1,7 +1,6 @@
-import StatusBar from "@/components/statusBar/statusBar";
 import ProfileCard from "@/components/profileCard/profileCard";
-import QuestCard from "@/components/questCard/questCard";
-import Link from "next/link";
+import QuestCardApplied from "@/components/questCardApplied/questCardApplied";
+import QuestCardComplete from "@/components/questCardComplete/questCardComplete";
 import quests from "@/data/questCardData";
 import Button from "@/components/button/button";
 import NavBar from "@/components/navBar/navBar";
@@ -9,7 +8,6 @@ import NavBar from "@/components/navBar/navBar";
 export default function Home() {
     return (
         <div className="homePage">
-            <StatusBar />
             <div className="userProfileData">
                 <img
                     className="homeIntroGraphic"
@@ -25,9 +23,9 @@ export default function Home() {
                         <h3>UPCOMING QUESTS</h3>
                     </div>
                     <div className="displayQuests"></div>
-                    {quests.slice(0, 2).map((quest) => {
+                    {quests.slice(16, 17).map((quest) => {
                         return (
-                            <QuestCard
+                            <QuestCardApplied
                                 key={quest.id}
                                 id={quest.id}
                                 img={quest.img}
@@ -35,7 +33,6 @@ export default function Home() {
                                 tags={quest.tags}
                                 memberCount={quest.memberCount}
                                 date={quest.date}
-                                distance={quest.distance}
                             />
                         );
                     })}
@@ -46,9 +43,9 @@ export default function Home() {
                         <h3>COMPLETED</h3>
                     </div>
                     <div className="displayQuests"></div>
-                    {quests.slice(3, 6).map((quest) => {
+                    {quests.slice(12, 14).map((quest) => {
                         return (
-                            <QuestCard
+                            <QuestCardComplete
                                 key={quest.id}
                                 id={quest.id}
                                 img={quest.img}
@@ -56,7 +53,6 @@ export default function Home() {
                                 tags={quest.tags}
                                 memberCount={quest.memberCount}
                                 date={quest.date}
-                                distance={quest.distance}
                             />
                         );
                     })}
