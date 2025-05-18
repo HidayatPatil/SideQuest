@@ -53,6 +53,10 @@ h1 {
     flex-direction: column;
 }
 
+.completedQuests {
+    margin-bottom: 120px;
+}
+
 .sectionTitle {
     display: flex;
     flex-direction: row;

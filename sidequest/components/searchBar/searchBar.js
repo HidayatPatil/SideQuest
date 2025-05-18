@@ -24,9 +24,9 @@ export default function SearchBar({ onSearch }) {
 				/>
 				<img className={styles.searchIcon} src="/Icons/searchIcon.svg" />
 			</div>
-			<div className={styles.filter}>
+			{/* <div className={styles.filter}>
 				<img className={styles.filterIcon} src="/Icons/filterIcon.svg" />
-			</div>
+			</div> */}
 		</div>
 	);
 }

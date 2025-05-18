@@ -1,4 +1,3 @@
-import StatusBar from "@/components/statusBar/statusBar";
 import NavBar from "@/components/navBar/navBar";
 import QuestCard from "@/components/questCard/questCard";
 import quests from "@/data/questCardData";
@@ -48,7 +47,6 @@ export default function QuestBoard() {
 
 	return (
 		<div className="questBoardContainer">
-			<StatusBar />
 			<div className="questboardPage">
 				<div className="boardHeader">
 					<h1>Quest Board</h1>
