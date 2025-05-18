@@ -1,4 +1,4 @@
-import styles from "@/components/profileCard/profile-card.module.css";
+import styles from "@/components/profileCard/profileCard.module.css";
 import Link from "next/link";
 
 export default function ProfileCard() {
@@ -11,7 +11,7 @@ export default function ProfileCard() {
                 <div className={styles.profileMain}>
                     <img
                         className={styles.profileImage}
-                        src="\profile_Image\Maya.jpg"
+                        src="\profileImage\Maya.jpg"
                     />
                     <div className={styles.profileContent}>
                         <div className={styles.profileData}>

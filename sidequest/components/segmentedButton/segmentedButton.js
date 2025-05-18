@@ -1,4 +1,4 @@
-import styles from "@/components/segmentedButton/segmented-button.module.css";
+import styles from "@/components/segmentedButton/segmentedButton.module.css";
 import { useState } from "react";
 
 export default function SegmentedButton({ onToggle }) {

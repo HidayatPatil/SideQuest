@@ -1,9 +1,9 @@
-import StatusBar from "@/components/statusBar/status-bar";
-import NavBar from "@/components/navBar/nav-bar";
-import QuestCard from "@/components/questCard/quest-card";
-import quests from "@/data/quest-card-data";
-import SearchBar from "@/components/searchBar/search-bar";
-import SegmentedButton from "@/components/segmentedButton/segmented-button";
+import StatusBar from "@/components/statusBar/statusBar";
+import NavBar from "@/components/navBar/navBar";
+import QuestCard from "@/components/questCard/questCard";
+import quests from "@/data/questCardData";
+import SearchBar from "@/components/searchBar/searchBar";
+import SegmentedButton from "@/components/segmentedButton/segmentedButton";
 import { useEffect, useState } from "react";
 
 export default function QuestBoard() {

@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
-import ProfileCard from "@/components/profileCard/profile-card";
-import QuestTags from "@/components/questTag/quest-tag";
-import quests from "@/data/quest-card-data";
-import QuestStatus from "@/components/questStatus/quest-status";
-import StatusBar from "@/components/statusBar/status-bar";
+import ProfileCard from "@/components/profileCard/profileCard";
+import QuestTags from "@/components/questTag/questTag";
+import quests from "@/data/questCardData";
+import QuestStatus from "@/components/questStatus/questStatus";
+import StatusBar from "@/components/statusBar/statusBar";
 import Button from "@/components/button/button";
 //import Link from "next/link";
 
@@ -15,7 +15,7 @@ export default function QuestDetail() {
 	}
 	const quest = quests[id]; // Get the quest data based on the index
 
-	const imagePath = `/quest_Image/quest-${id}.jpg`;
+	const imagePath = `/questImage/quest-${id}.jpg`;
 
 	return (
 		<div className="questDetailContainer">

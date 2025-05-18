@@ -1,10 +1,10 @@
-import StatusBar from "@/components/statusBar/status-bar";
-import ProfileCard from "@/components/profileCard/profile-card";
-import QuestCard from "@/components/questCard/quest-card";
+import StatusBar from "@/components/statusBar/statusBar";
+import ProfileCard from "@/components/profileCard/profileCard";
+import QuestCard from "@/components/questCard/questCard";
 import Link from "next/link";
-import quests from "@/data/quest-card-data";
+import quests from "@/data/questCardData";
 import Button from "@/components/button/button";
-import NavBar from "@/components/navBar/nav-bar";
+import NavBar from "@/components/navBar/navBar";
 
 export default function Home() {
     return (
@@ -13,7 +13,7 @@ export default function Home() {
             <div className="userProfileData">
                 <img
                     className="homeIntroGraphic"
-                    src="\app_graphics\adventure.svg"
+                    src="\appGraphics\adventure.svg"
                 />
                 <div className="profileCard">
                     <ProfileCard />

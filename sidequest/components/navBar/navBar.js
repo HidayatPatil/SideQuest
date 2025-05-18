@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "@/components/navBar/nav-bar.module.css";
+import styles from "@/components/navBar/navBar.module.css";
 
 export default function NavBar() {
     const router = useRouter();
@@ -26,20 +26,20 @@ export default function NavBar() {
                         {isActive("/") && <div className={styles.iconActive} />}
                     </div>
                 </Link>
-                <Link href="/quest-board">
+                <Link href="/questBoard">
                     <div className={styles.navIcon}>
                         <img
                             className={`${styles.icon} ${
-                                isActive("/quest-board") ? styles.active : ""
+                                isActive("/questBoard") ? styles.active : ""
                             }`}
                             src={
-                                isActive("/quest-board")
+                                isActive("/questBoard")
                                     ? "/Icons/Sword_active.svg"
                                     : "/Icons/Sword.svg"
                             }
                             alt="Quest Icon"
                         />
-                        {isActive("/quest-board") && (
+                        {isActive("/questBoard") && (
                             <div className={styles.iconActive} />
                         )}
                     </div>

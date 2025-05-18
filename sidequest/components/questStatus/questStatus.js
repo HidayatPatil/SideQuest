@@ -1,4 +1,4 @@
-import styles from "@/components/questStatus/quest-status.module.css";
+import styles from "@/components/questStatus/questStatus.module.css";
 
 export default function QuestStatus() {
 	return (

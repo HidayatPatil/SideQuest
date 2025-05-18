@@ -1,6 +1,6 @@
-import NavBar from "@/components/navBar/nav-bar";
-import StatusBar from "@/components/statusBar/status-bar";
-import ProfileCard from "@/components/profileCard/profile-card";
+import NavBar from "@/components/navBar/navBar";
+import StatusBar from "@/components/statusBar/statusBar";
+import ProfileCard from "@/components/profileCard/profileCard";
 
 export default function Profile() {
     return (

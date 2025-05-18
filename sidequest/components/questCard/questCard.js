@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import styles from "@/components/questCard/quest-card.module.css";
-import QuestTags from "@/components/questTag/quest-tag";
-import QuestStatus from "@/components/questStatus/quest-status";
+import styles from "@/components/questCard/questCard.module.css";
+import QuestTags from "@/components/questTag/questTag";
+import QuestStatus from "@/components/questStatus/questStatus";
 import Link from "next/link";
 
 export default function QuestCard({
@@ -66,14 +66,14 @@ export default function QuestCard({
 			<div className={styles.mainBody}>
 				<Link
 					className={styles.questImage}
-					href={`/quest-detail/${id}`}
+					href={`/questDetail/${id}`}
 					passHref
 				>
 					<img className={styles.questImage} src={img} alt={title} />
 				</Link>
 				<div className={styles.mainContent}>
 					<div className={styles.cardTitle}>
-						<Link href={`/quest-detail/${id}`} passHref>
+						<Link href={`/questDetail/${id}`} passHref>
 							<h2 className={styles.titleText}>{title}</h2>
 						</Link>
 						<img
@@ -87,14 +87,14 @@ export default function QuestCard({
 							alt="Save for later"
 						/>
 					</div>
-					<Link href={`/quest-detail/${id}`} passHref>
+					<Link href={`/questDetail/${id}`} passHref>
 						<div className={styles.cardTags}>
 							{tags.map((tag, index) => (
 								<QuestTags key={index} tagName={tag} />
 							))}
 						</div>
 					</Link>
-					<Link href={`/quest-detail/${id}`} passHref>
+					<Link href={`/questDetail/${id}`} passHref>
 						<div className={styles.cardDetails}>
 							<div className={styles.memberCount}>
 								<img
@@ -112,7 +112,7 @@ export default function QuestCard({
 					</Link>
 				</div>
 			</div>
-			<Link href={`/quest-detail/${id}`} passHref>
+			<Link href={`/questDetail/${id}`} passHref>
 				<div className={styles.footerBody}>
 					<div className={styles.questDate}>
 						<img className={styles.DateCalender} src="/Icons/questDate.svg" />

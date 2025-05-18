@@ -174,7 +174,7 @@ h1 {
 }
 
 .locationView {
-    background-image: url("/app_Graphics/map.png");
+    background-image: url("/appGraphics/map.png");
     background-size: cover;
     background-position: center;
     height: 207px;
