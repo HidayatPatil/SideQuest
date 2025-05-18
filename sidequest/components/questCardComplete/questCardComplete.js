@@ -15,14 +15,12 @@ export default function QuestCardComplete({
 }) {
 	return (
 		<CardVisual>
-			<Link className={styles.questImage} href={`/questDetail/${id}`} passHref>
+			<Link href={`/questDetail/${id}`} passHref>
 				<div className={styles.mainBody}>
 					<img className={styles.questImage} src={img} alt={title} />
 					<div className={styles.mainContent}>
 						<div className={styles.cardTitle}>
-							<Link href={`/questDetail/${id}`} passHref>
-								<h2 className={styles.titleText}>{title}</h2>
-							</Link>
+							<h2 className={styles.titleText}>{title}</h2>
 							<img
 								className={styles.cardIcons}
 								src="\Icons\questCompleteWarning.svg"
