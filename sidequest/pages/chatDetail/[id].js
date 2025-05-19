@@ -1,51 +1,175 @@
 import { useRouter } from "next/router";
-import StatusBar from "@/components/statusBar/statusBar";
-import chats from "@/data/chatCardData";
+import ProfileCard from "@/components/profileCard/profileCard";
+import QuestTags from "@/components/questTag/questTag";
+import quests from "@/data/questCardData";
+import QuestStatus from "@/components/questStatus/questStatus";
+import Button from "@/components/button/button";
+import IconButton from "@/components/iconButton/iconButton";
+import QuestApplication from "@/components/questApplicationPanel/questApplication";
+import { useState } from "react";
+//import Link from "next/link";
 
-export default function ChatDetail() {
+export default function QuestDetail() {
     const router = useRouter();
-    const { id } = router.query;
-
-    const chat = chats.find((c) => c.id === Number(id));
-
-    if (!chat) {
-        return <p>Loading...</p>;
+    const { id } = router.query; // Get the index????
+    if (!id || !quests[id]) {
+        return <p>Loading...</p>; // or a fallback UI
     }
+    const quest = quests[id]; // Get the quest data based on the index
 
-    const imagePath = `/profileImage/${chat.name}.jpg`;
+    const imagePath = `/questImage/quest-${id}.jpg`;
+
+    const [showApplicationPanel, setShowApplicationPanel] = useState(false);
+
+    const openApplicationPanel = () => {
+        console.log("Opening panel");
+        setShowApplicationPanel(true);
+    };
+
+    const closeApplicationPanel = () => {
+        setShowApplicationPanel(false);
+    };
 
     return (
-        <div className="chatDetailContainer">
-            <StatusBar />
-            <div className="chatDetailPage">
-                <h1 className="chatDetailHeader">{chat.name}</h1>
-                <div className="chatMessageContainer">
+        <div className="questDetailContainer">
+            <div className="questDetailPage">
+                <div className="questDetailHeader">
+                    <div className="questHeaderContainer">
+                        <IconButton
+                            icon="/Icons/arrowLeft.svg"
+                            onClick={() => router.back()}
+                            className="backButton"
+                            variant="primaryOutline"
+                        ></IconButton>
+                        <div className="dateCalender">{quest.date}</div>
+                    </div>
                     <img
+                        className="questImage"
                         src={imagePath}
-                        alt="User"
+                        alt={quest.title}
                     />
-                    <div className="chatMessageText">{chat.message3}</div>
-                    <div className="chatTime">{chat.time}</div>
                 </div>
 
-                <div className="chatMessageContainer">
-                    <img
-                        src={imagePath}
-                        alt="User"
-                    />
-                    <div className="chatMessageText">{chat.message2}</div>
-                    <div className="chatTime">{chat.time}</div>
+                <div className="questDetailBody">
+                    <h1>{quest.title}</h1>
+                    <p className="questDescription">{quest.desc}</p>
+
+                    <div className="cardTags">
+                        {quest?.tags?.map((tag, index) => (
+                            <QuestTags
+                                key={index}
+                                tagName={tag}
+                            />
+                        ))}
+                    </div>
                 </div>
 
-                <div className="chatMessageContainer">
-                    <img
-                        src={imagePath}
-                        alt="User"
-                    />
-                    <div className="chatMessageText">{chat.message}</div>
-                    <div className="chatTime">{chat.time}</div>
+                <div className="questMaster">
+                    <div className="questTitle sectionTitle ">
+                        <h3>QUEST MASTER</h3>
+                    </div>
+                    <div className="userProfileData">
+                        <ProfileCard />
+                    </div>
+                </div>
+
+                <hr className="divider" />
+
+                <div className="questTitle sectionTitle ">
+                    <h3>LOCATION</h3>
+                </div>
+
+                <div className="locationDetails">
+                    <a
+                        href="https://www.google.com/maps"
+                        className="googleMapLink"
+                        target="_blank"
+                    >
+                        <div className="locationView">
+                            <div className="locationIconContainer">
+                                <img
+                                    className="locationIcon"
+                                    src="/Icons/ArrowsOut.svg"
+                                />
+                            </div>
+                        </div>
+                        <p>
+                            Note: Location can potential change. Make sure to
+                            check in often to be updated on any changes.
+                        </p>
+                    </a>
+                </div>
+
+                <hr className="divider" />
+
+                <div className="partyMembers">
+                    <div className="questTitle sectionTitle ">
+                        <h3>PARTY MEMBERS</h3>
+                    </div>
+                    <div className="memberCount">{quests.memberCount}</div>
+                    <div className="partyMembersList">
+                        <div className="partyMembersProfile">
+                            <img
+                                className="partyMember"
+                                src="/profileImage/Nila.jpg"
+                                alt="User"
+                            />
+                            <div className="partyMemberName">Kansi M</div>
+                            <div className="partyMemberID">ID#012938</div>
+                        </div>
+                        <div className="partyMembersProfile">
+                            <img
+                                className="partyMember"
+                                src="/profileImage/Alex.jpg"
+                                alt="User"
+                            />
+                            <div className="partyMemberName">Simpon S</div>
+                            <div className="partyMemberID">ID#013328</div>
+                        </div>
+                        <div className="partyMembersProfile">
+                            <img
+                                className="partyMember"
+                                src="/profileImage/Sara.jpg"
+                                alt="User"
+                            />
+                            <div className="partyMemberName">Zhunshi L</div>
+                            <div className="partyMemberID">ID#120493</div>
+                        </div>
+                        <div className="partyMembersProfile">
+                            <div className="partyMember">?</div>
+                            <div className="partyMemberName">TBD</div>
+                            <div className="partyMemberID">ID#_</div>
+                        </div>
+                        <div className="partyMembersProfile">
+                            <div className="partyMember">?</div>
+                            <div className="partyMemberName">TBD</div>
+                            <div className="partyMemberID">ID#_</div>
+                        </div>
+                        <div className="partyMembersProfile">
+                            <div className="partyMember">?</div>
+                            <div className="partyMemberName">TBD</div>
+                            <div className="partyMemberID">ID#_</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div className="questApplication">
+                <Button
+                    text="Join Quest"
+                    variant="primary"
+                    onClick={openApplicationPanel}
+                />
+                {/* <div className="likeQuest">
+                    <img />
+                </div> */}
+            </div>
+            {showApplicationPanel && (
+                <div className="Overlay">
+                    <div className="applicationPanel">
+                        <QuestApplication onClose={closeApplicationPanel} />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
