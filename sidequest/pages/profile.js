@@ -1,13 +1,13 @@
-import NavBar from "@/components/navBar/nav-bar";
+
+import NavBar from "@/components/navBar/navBar";
 import StatusBar from "@/components/statusBar/status-bar";
-import ProfileCard from "@/components/profileCard/profile-card";
+import ProfileCard from "@/components/profileCard/profileCard";
 import Button from "@/components/button/button";
 //yippee
 
 export default function Profile() {
     return (
         <div className="profileCointainer">
-            <StatusBar />
             <div className="profilePage">
                 <h1>My Profile</h1>
                 <div className="userProfileData">

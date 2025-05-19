@@ -1,0 +1,11 @@
+.statusBar_Container {
+    width: 393px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+.statusBarImg {
+    width: 100%;
+    object-fit: fill;
+}

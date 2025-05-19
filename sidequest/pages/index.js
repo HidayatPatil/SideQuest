@@ -1,68 +1,77 @@
-import StatusBar from "@/components/statusBar/status-bar";
-import ProfileCard from "@/components/profileCard/profile-card";
-import QuestCard from "@/components/questCard/quest-card";
-import Link from "next/link";
-import quests from "@/data/quest-card-data";
-import Button from "@/components/button/button";
-import NavBar from "@/components/navBar/nav-bar";
+import ProfileCard from "@/components/profileCard/profileCard";
+import QuestCardApplied from "@/components/questCardApplied/questCardApplied";
+import QuestCardComplete from "@/components/questCardComplete/questCardComplete";
+import quests from "@/data/questCardData";
+import NavBar from "@/components/navBar/navBar";
+import FeedBack from "@/components/feedbackPanel/feedback";
+import { useState } from "react";
 
 export default function Home() {
-    return (
-        <div className="homePage">
-            <StatusBar />
-            <div className="userProfileData">
-                <img
-                    className="homeIntroGraphic"
-                    src="\app_graphics\adventure.svg"
-                />
-                <div className="profileCard">
-                    <ProfileCard />
-                </div>
-            </div>
-            <div className="homeQuests">
-                <div className="upcomingQuests">
-                    <div className="sectionTitle">
-                        <h3>UPCOMING QUESTS</h3>
-                    </div>
-                    <div className="displayQuests"></div>
-                    {quests.slice(0, 2).map((quest) => {
-                        return (
-                            <QuestCard
-                                key={quest.id}
-                                id={quest.id}
-                                img={quest.img}
-                                title={quest.title}
-                                tags={quest.tags}
-                                memberCount={quest.memberCount}
-                                date={quest.date}
-                                distance={quest.distance}
-                            />
-                        );
-                    })}
-                </div>
-                <hr className="divider" />
-                <div className="completedQuests">
-                    <div className="sectionTitle">
-                        <h3>COMPLETED</h3>
-                    </div>
-                    <div className="displayQuests"></div>
-                    {quests.slice(3, 6).map((quest) => {
-                        return (
-                            <QuestCard
-                                key={quest.id}
-                                id={quest.id}
-                                img={quest.img}
-                                title={quest.title}
-                                tags={quest.tags}
-                                memberCount={quest.memberCount}
-                                date={quest.date}
-                                distance={quest.distance}
-                            />
-                        );
-                    })}
-                </div>
-            </div>
-            <NavBar />
-        </div>
-    );
+	const [showFeedback, setShowFeedback] = useState(false);
+
+	const openFeedbackPanel = () => {
+		console.log("Opening panel");
+		setShowFeedback(true);
+	};
+    
+	const closeFeedbackPanel = () => {
+		setShowFeedback(false);
+	};
+
+	return (
+		<div className="homePage">
+			<div className="userProfileData">
+				<img className="homeIntroGraphic" src="\appGraphics\adventure.svg" />
+				<div className="profileCard">
+					<ProfileCard />
+				</div>
+			</div>
+			<div className="homeQuests">
+				<div className="upcomingQuests">
+					<div className="sectionTitle">
+						<h3>UPCOMING QUESTS</h3>
+					</div>
+					<div className="displayQuests"></div>
+					{quests.slice(16, 17).map((quest) => {
+						return (
+							<QuestCardApplied
+								key={quest.id}
+								id={quest.id}
+								img={quest.img}
+								title={quest.title}
+								tags={quest.tags}
+								memberCount={quest.memberCount}
+								date={quest.date}
+							/>
+						);
+					})}
+				</div>
+				<hr className="divider" />
+				<div className="completedQuests">
+					<div className="sectionTitle">
+						<h3>COMPLETED</h3>
+					</div>
+					<div className="displayQuests"></div>
+					{quests.slice(12, 14).map((quest) => {
+						return (
+							<QuestCardComplete
+								key={quest.id}
+								id={quest.id}
+								img={quest.img}
+								title={quest.title}
+								tags={quest.tags}
+								memberCount={quest.memberCount}
+								date={quest.date}
+								onFeedbackClick={openFeedbackPanel} // ✅ This is REQUIRED
+							/>
+						);
+					})}
+				</div>
+			</div>
+			<div className="feedBackPanel">
+				{showFeedback && <FeedBack onClose={closeFeedbackPanel} />}
+			</div>
+			<NavBar />
+		</div>
+	);
 }
