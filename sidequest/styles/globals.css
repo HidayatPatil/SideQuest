@@ -342,32 +342,16 @@ h1 {
 
 /* -------------------------Profile---------------------------- */
 
-.profilePage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 0px;
-    padding: 60px 0px 100px;
-    background-color: white;
-}
-
-.userProfileData {
-    margin: 16px;
-}
-
 .profileStats {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	align-self: stretch;
 }
 
 .statsContainer {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
 }
 
 .profileStatsContainer {
@@ -383,11 +367,6 @@ h1 {
 	border-radius: 12px;
 	border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
 	background: var(--WHITE, #fff);
-}
-
-.profileDivider {
-    color: var(--Secondary-secondary-100, #d6d3d2);
-    width: 100%;
 }
 
 .profileStatsSection {

@@ -6,9 +6,13 @@ export default function Profile() {
     return (
         <div className="profileCointainer">
             <div className="profilePage">
-                <h1>My Profile</h1>
-                <div className="userProfileData">
-                    <ProfileCard />
+                <div className="statsContainer">
+                    <h1>Maya’s Profile</h1>
+                </div>
+                <div className="statsContainer">
+                    <div className="userProfileData">
+                        <ProfileCard />
+                    </div>
                 </div>
                 <div className="statsContainer">
                     <div className="sectionTitle">
@@ -20,7 +24,7 @@ export default function Profile() {
                                 Bonjour! I am new to Vancouver and wanting to
                                 explore the amazing nature here.
                             </div>
-                            <hr className="profileDivider" />
+                            <hr className="divider" />
                             <div className="profileStatsSection">
                                 <h4>Pronouns</h4>
                                 <div className="profileTag">She/Her</div>
@@ -60,6 +64,7 @@ export default function Profile() {
                                     Hearing Impaired
                                 </div>
                             </div>
+
                             <Button
                                 text="Edit Profile"
                                 variant="outline"
