@@ -1,6 +1,5 @@
-
 import NavBar from "@/components/navBar/navBar";
-import StatusBar from "@/components/statusBar/status-bar";
+import StatusBar from "@/components/statusBar/statusBar";
 import ProfileCard from "@/components/profileCard/profileCard";
 import Button from "@/components/button/button";
 //yippee
@@ -65,7 +64,7 @@ export default function Profile() {
                             </div>
                             <Button
                                 text="Edit Profile"
-                                variant="primaryOutline"
+                                variant="outline"
                                 onClick={() => alert("Edit!")}
                                 style={{ width: "100%" }}
                             />
