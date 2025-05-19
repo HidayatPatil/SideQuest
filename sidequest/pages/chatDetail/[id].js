@@ -1,23 +1,31 @@
 import { useRouter } from "next/router";
 import StatusBar from "@/components/statusBar/statusBar";
-import Button from "@/components/button/button";
-import Link from "next/link";
+import chats from "@/data/chatCardData";
 
 export default function ChatDetail() {
-	const router = useRouter();
-	const { id } = router.query; // Get the index????
-	if (!id || !quests[id]) {
-		return <p>Loading...</p>; // or a fallback UI
-	}
-	const quest = quests[id]; // Get the quest data based on the index
+    const router = useRouter();
+    const { id } = router.query;
 
-	const imagePath = `/questImage/quest-${id}.jpg`;
+    const chat = chats.find((c) => c.id === id);
 
-	return (
-		<div className="chatDetailContainer">
-			<StatusBar />
-			
+    if (!chat) {
+        return <p>Loading...</p>;
+    }
 
-			</div>
-	);
+    const imagePath = `/questImage/${chat.name}.jpg`;
+
+    return (
+        <div className="chatDetailContainer">
+            <StatusBar />
+            <h1>{chat.name}</h1>
+            <img
+                src={imagePath}
+                alt="User"
+            />
+            <div className="chatMessage">{chat.message3}</div>
+            <div className="chatMessage">{chat.message2}</div>
+            <div className="chatMessage">{chat.message}</div>
+            <div className="chatTime">{chat.time}</div>
+        </div>
+    );
 }

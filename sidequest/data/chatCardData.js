@@ -56,6 +56,8 @@ const chats = [
         userImg: "/profileImage/Jeremy.jpg",
         name: "Jeremy",
         message: "I'm outside your house",
+        message2: "I'm outside your house",
+        message3: "I'm outside your house",
         time: "38d ago",
     },
     {
@@ -63,35 +65,9 @@ const chats = [
         userImg: "/profileImage/Sara.jpg",
         name: "Sara",
         message: "I'm outside your house",
+        message2: "I'm outside your house",
+        message3: "I'm outside your house",
         time: "44d ago",
-    },
-    {
-        id: 8,
-        userImg: "/profileImage/Alex.jpg",
-        name: "Alex",
-        message: "I'm outside your house",
-        time: "150d ago",
-    },
-    {
-        id: 9,
-        userImg: "/profileImage/Nila.jpg",
-        name: "Nila",
-        message: "Where are you?",
-        time: "502d ago",
-    },
-    {
-        id: 10,
-        userImg: "/profileImage/MayaChat.jpg",
-        name: "Maya",
-        message: "I'm outside your house",
-        time: "1000d ago",
-    },
-    {
-        id: 11,
-        userImg: "/profileImage/Jeremy.jpg",
-        name: "Jeremy",
-        message: "I'm outside your house",
-        time: "2000d ago",
     },
 ];
 

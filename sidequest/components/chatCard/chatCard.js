@@ -5,7 +5,7 @@ export default function ChatCard({ id, userImg, name, message, time }) {
     return (
         <div className={styles.chatCardContainer}>
             <Link
-                href={`/chat/${id}`}
+                href={`/chatDetail/${id}`}
                 className={styles.chatCard}
                 passHref
             >

@@ -2,7 +2,7 @@ import NavBar from "@/components/navBar/navBar";
 import StatusBar from "@/components/statusBar/statusBar";
 import Link from "next/link";
 import ChatCard from "@/components/chatCard/chatCard";
-import chats from "@/data/chatCardData";
+import chat from "@/data/chatCardData";
 
 export default function Chat() {
     return (
@@ -13,22 +13,18 @@ export default function Chat() {
                     <h1>Chat Log</h1>
                 </div>
                 <div className="chatCards">
-                    <Link
-                        href={`/chatDetail/${id}`}
-                        passHref
-                    >
-                        {chats.map((chats) => {
-                            return (
-                                <ChatCard
-                                    id={chats.id}
-                                    userImg={chats.userImg}
-                                    name={chats.name}
-                                    message={chats.message}
-                                    time={chats.time}
-                                />
-                            );
-                        })}
-                    </Link>
+                    {chat.map((chat) => {
+                        return (
+                            <ChatCard
+                                key={chat.id}
+                                id={chat.id}
+                                userImg={chat.userImg}
+                                name={chat.name}
+                                message={chat.message}
+                                time={chat.time}
+                            />
+                        );
+                    })}
                 </div>
             </div>
             <NavBar />
