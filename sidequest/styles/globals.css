@@ -2,253 +2,342 @@
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+	margin: 0 auto;
+	padding: 0;
+	overflow-x: hidden;
+	width: 393px;
 }
 
 body {
-    background-color: var(--Secondary-secondary-50, #edecec);
+	background-color: var(--Secondary-secondary-50, #edecec);
 }
 
 .homePage {
-    display: flex;
-    flex-direction: column;
-    gap: 126px;
+	display: flex;
+	flex-direction: column;
+	gap: 126px;
 }
 
 h1 {
-    color: var(--BLACK, #0c0b0b);
-    font-size: 24px;
-    font-weight: 600;
+	color: var(--BLACK, #0c0b0b);
+	font-size: 24px;
+	font-weight: 600;
 }
 
 .userProfileData {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .homeIntroGraphic {
-    width: 100%;
-    object-fit: cover;
+	width: 100%;
+	object-fit: cover;
 }
 
 .profileCard {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -102px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -102px;
 }
 
 .homeQuests {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	width: auto;
 }
 
 .upcomingQuests,
 .completedQuests {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+}
+
+.completedQuests {
+	margin-bottom: 120px;
 }
 
 .sectionTitle {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 16px 8px 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 16px 8px 16px;
 }
 
 .sectionTitle h3 {
-    color: var(--Primary-primary-700, #2d71b5);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px; /* 125% */
+	color: var(--Primary-primary-700, #2d71b5);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px; /* 125% */
 }
 
 .sectionTitle p {
-    color: var(--Secondary-secondary-400, #8a827a);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px; /* 125% */
+	color: var(--Secondary-secondary-400, #8a827a);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px; /* 125% */
 }
 
 .divider {
-    margin: 0 16px;
-    color: #bbb7b4;
+	margin: 0 16px;
+	color: #bbb7b4;
 }
 
 .questImage {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.feedBackPanel {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 5;
 }
 
 /* -------------------------Quest Details---------------------------- */
 
 .questDetailPage {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.questDetailHeader {
+	position: relative;
+}
+
+.questHeaderContainer {
+	padding: 0 16px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: absolute;
+	transform: translateY(32px);
 }
 
 .questDetailBody {
-    margin: auto 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+	margin: auto 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 
 .questMaster {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
 
 .locationDetails {
-    margin: auto 16px;
+	margin: auto 16px;
 }
 
 .questDetailContainer {
-    height: 100vh;
-    /* overflow: hidden; 🔒 Prevent scrolling */
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+	/* height: 100vh; */
+	/* overflow: hidden; 🔒 Prevent scrolling */
+	display: flex;
+	flex-direction: column;
+	background-color: white;
 }
 
 .cardTags {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+	display: flex;
+	align-items: center;
+	gap: 4px;
 }
 
 .dateCalender {
-    color: var(--Primary-primary-700, #2d71b5);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    display: flex;
-    padding: 12px 14px;
-    align-items: center;
-    gap: 12px;
-    border-radius: 100px;
-    border-top: 1px solid var(--Primary-primary-700, #2d71b5);
-    border-right: 1px solid var(--Primary-primary-700, #2d71b5);
-    border-left: 1px solid var(--Primary-primary-700, #2d71b5);
-    background: var(--WHITE, #fff);
-
-    /* Primary700-Shadow */
-    box-shadow: 0px 4px 0px 0px #2d71b5;
+	color: var(--Primary-primary-700, #2d71b5);
+	font-size: 14px;
+	font-weight: 400;
+	max-height: 40px;
+	display: flex;
+	padding: 12px 24px;
+	align-items: center;
+	border-radius: 100px;
+	border: 1px solid var(--Primary-primary-700, #2d71b5);
+	background: var(--WHITE, #fff);
+	box-shadow: 0px 4px 0px 0px #2d71b5;
+	box-sizing: border-box;
 }
 
 .locationDetails {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-    border-radius: 12px;
-    border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-self: stretch;
+	border-radius: 12px;
+	border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
 }
 
 .locationDetails p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 10px;
-    align-self: stretch;
-    color: var(--Secondary-secondary-400, #8a827a);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    border-top: 1px solid var(--Secondary-secondary-75, #e4e2e0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 16px;
+	gap: 10px;
+	align-self: stretch;
+	color: var(--Secondary-secondary-400, #8a827a);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	border-top: 1px solid var(--Secondary-secondary-75, #e4e2e0);
 }
 
 .locationDetails .locationIconContainer {
-    right: 24px;
+	right: 24px;
 }
 
 .locationView {
-    background-image: url("/app_Graphics/map.png");
-    background-size: cover;
-    background-position: center;
-    height: 207px;
-    border-radius: 12px 12px 0px 0px;
-    display: flex;
-    justify-content: end;
-    align-items: start;
+	background-image: url("/appGraphics/map.png");
+	background-size: cover;
+	background-position: center;
+	height: 207px;
+	border-radius: 12px 12px 0px 0px;
+	display: flex;
+	justify-content: end;
+	align-items: start;
 }
 
 .locationIconContainer {
-    display: flex;
-    padding: 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 44px;
-    height: 44px;
-    border-radius: 100px;
-    border: 1.5px solid var(--Secondary-secondary-50, #edecec);
-    background: white;
-    margin: 8px 8px;
+	display: flex;
+	padding: 12px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	width: 44px;
+	height: 44px;
+	border-radius: 100px;
+	border: 1.5px solid var(--Secondary-secondary-50, #edecec);
+	background: white;
+	margin: 8px 8px;
 }
 
 .locationIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.partyMembers {
+	margin-bottom: 120px;
+}
+
+.questApplication {
+	display: flex;
+	width: 393px;
+	padding: 24px 16px 32px 32px;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #d6d3d2;
+	background: white;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.applicationPanel {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.Overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4); /* translucent black */
+	z-index: 999; /* higher than other elements */
+	display: flex;
+	justify-content: center;
+	align-items: flex-end; /* push to bottom like a drawer */
 }
 
 /* -------------------------Quest Board---------------------------- */
 .questBoardContainer {
-    height: 100vh;
-    /* overflow: hidden; 🔒 Prevent scrolling */
-    display: flex;
-    flex-direction: column;
+	height: 100vh;
+	/* overflow: hidden; 🔒 Prevent scrolling */
+	display: flex;
+	flex-direction: column;
 }
 
 .questboardPage,
 .questDetailPage {
-    margin-top: 44px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    /* overflow-y: auto; */
+	margin-top: 44px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	/* overflow-y: auto; */
 }
 
 .boardHeader {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-top: 16px;
-    gap: 16px;
-    overflow-y: auto;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding-top: 16px;
+	gap: 16px;
+	overflow-y: auto;
 
-    position: sticky;
-    top: 0;
-    z-index: 1;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
 .boardHeader h1 {
-    text-align: center;
+	text-align: center;
 }
 
 .boardActions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	gap: 12px;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+/* ------------------------Quest Applied------------------------ */
+.qsAppliedBg {
+    background: white;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.appliedContainer {
+	display: flex;
+	width: 100%;
+    /* margin-top: 80px; */
+	padding: 48px 20px 32px 20px;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}
+
+.qsAppliedContent {
+    text-align: center;
+}
+
+.qsAppliedButtons {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
     gap: 12px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    width: 100%;
+    margin-top: 20px;
 }
 
 /* -------------------------Profile---------------------------- */
@@ -281,23 +370,19 @@ h1 {
     align-self: stretch;
 }
 
-.sectionTitle {
-    margin: 0px 16px;
-}
-
 .profileStatsContainer {
-    display: flex;
-    width: auto;
-    padding: 12px 16px 16px 16px;
-    margin: 0 16px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    align-self: center;
-    gap: 12px;
-    border-radius: 12px;
-    border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
-    background: var(--WHITE, #fff);
+	display: flex;
+	width: auto;
+	padding: 12px 16px 16px 16px;
+	margin: 0 16px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	align-self: center;
+	gap: 12px;
+	border-radius: 12px;
+	border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+	background: var(--WHITE, #fff);
 }
 
 .profileDivider {
@@ -306,51 +391,151 @@ h1 {
 }
 
 .profileStatsSection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 4px;
+	align-self: stretch;
 }
 
 .profileStats h4 {
-    color: var(--Primary-primary-700, #2d71b5);
-    text-align: right;
+	color: var(--Primary-primary-700, #2d71b5);
+	text-align: right;
 
-    /* Body Bold */
-    font-family: Rubik;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px; /* 125% */
+	/* Body Bold */
+	font-family: Rubik;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px; /* 125% */
 }
 
 .bio {
-    color: var(--BLACK, #0c0b0b);
+	color: var(--BLACK, #0c0b0b);
 
-    /* Body Regular */
-    font-family: Rubik;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 125% */
+	/* Body Regular */
+	font-family: Rubik;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 125% */
 }
 
 .profileTags {
-    display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 6px;
-    align-self: stretch;
-    flex-wrap: wrap;
+	display: flex;
+	align-items: flex-start;
+	align-content: flex-start;
+	gap: 6px;
+	align-self: stretch;
+	flex-wrap: wrap;
 }
 
 .profileTag {
+	display: flex;
+	padding: 4px 8px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 4px;
+	background: var(--Secondary-secondary-50, #edecec);
+}
+
+/* -------------------------Chat---------------------------- */
+
+.chatContainer {
+    background-color: white;
+    height: 100vh;
+    padding: 60px 0px 840px 0px;
+}
+.chatPage {
     display: flex;
-    padding: 4px 8px;
+    flex-direction: column;
+}
+
+.chatHeader {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 4px;
+    height: 54px;
+    color: black;
+    font-family: Rubik;
+    font-size: 24px;
+    line-height: 32px;
+    border-bottom: 1px solid #dcdbdb;
+}
+
+.chatCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+/* -------------------------Chat Detail---------------------------- */
+
+.chatDetailContainer {
+    height: 100vh;
+    /* overflow: hidden; 🔒 Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.chatDetailPage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chatDetailHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 60px;
+    border-bottom: 1px solid #dcdbdb;
+}
+
+.chatMessageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px 16px;
+}
+
+.chatMessageContainer img {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.chatMessageText {
+    display: flex;
+    max-width: 276px;
+    height: 45px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 14px;
+    margin: 0px 10px 0px 18px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 8px;
     background: var(--Secondary-secondary-50, #edecec);
+}
+
+.chatTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--Secondary-secondary-800, #322e2a);
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
 }
