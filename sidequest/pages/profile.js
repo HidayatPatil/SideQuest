@@ -2,6 +2,7 @@ import NavBar from "@/components/navBar/nav-bar";
 import StatusBar from "@/components/statusBar/status-bar";
 import ProfileCard from "@/components/profileCard/profile-card";
 import Button from "@/components/button/button";
+//yippee
 
 export default function Profile() {
     return (
@@ -61,14 +62,13 @@ export default function Profile() {
                                 <div className="profileTag">
                                     Hearing Impaired
                                 </div>
-                                
                             </div>
                             <Button
-                                    text="Edit Profile"
-                                    variant="primaryOutline"
-                                    onClick={() => alert("Edit!")}
-                                    style={{ width: "100%" }}
-                                />
+                                text="Edit Profile"
+                                variant="primaryOutline"
+                                onClick={() => alert("Edit!")}
+                                style={{ width: "100%" }}
+                            />
                         </div>
                     </div>
                 </div>
