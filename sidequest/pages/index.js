@@ -4,15 +4,13 @@ import QuestCardComplete from "@/components/questCardComplete/questCardComplete"
 import quests from "@/data/questCardData";
 import Button from "@/components/button/button";
 import NavBar from "@/components/navBar/navBar";
+import IconButton from "@/components/iconButton/iconButton";
 
 export default function Home() {
     return (
         <div className="homePage">
             <div className="userProfileData">
-                <img
-                    className="homeIntroGraphic"
-                    src="\appGraphics\adventure.svg"
-                />
+                <img className="homeIntroGraphic" src="\appGraphics\adventure.svg" />
                 <div className="profileCard">
                     <ProfileCard />
                 </div>

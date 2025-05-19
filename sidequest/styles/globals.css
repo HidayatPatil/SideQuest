@@ -343,3 +343,22 @@ h1 {
     border-radius: 4px;
     background: var(--Secondary-secondary-50, #edecec);
 }
+
+.onboardingPage {
+    height: 852px;
+    width: 393px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 60px 16px 0 16px;
+    position: fixed;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    width: 361px;
+    gap: 16px;
+    position: fixed;
+    bottom: 32px;
+}

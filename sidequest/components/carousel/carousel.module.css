@@ -1,0 +1,76 @@
+.carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.slideContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.slideContent h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--BLACK, #0c0b0b);
+    margin: 0;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.slideImage {
+    height: 240px;
+    object-fit: contain;
+}
+
+.arrowButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.description {
+    font-size: 16px;
+    color: var(--BLACK, #0c0b0b);
+    padding: 0 16px;
+    margin: 0;
+}
+
+.paginationContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 90px;
+    border: none;
+    background-color: var(--Secondary-secondary-100, #d6d3d2);
+    padding: 0;
+    cursor: pointer;
+}
+
+.activeDot {
+    width: 24px;
+    background-color: var(--Primary-primary-700, #2d71b5);
+}
