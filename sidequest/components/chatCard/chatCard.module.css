@@ -1,9 +1,28 @@
 .chatCardContainer {
     display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: auto;
+    height: 84px;
+}
+
+.chatCard {
+    display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding: 12px 21px;
+    border-bottom: 1px solid #edecec;
     gap: 16px;
-    background-color: white;
+}
+
+.chatUserContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
 }
 
 .userImg {
@@ -11,6 +30,13 @@
     height: 60px;
     aspect-ratio: 1/1;
     border-radius: 50%;
+}
+
+.chatText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .chatUser {
@@ -26,7 +52,7 @@
 
 .userName {
     color: black;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .message {

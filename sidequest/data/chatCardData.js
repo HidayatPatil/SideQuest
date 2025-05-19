@@ -11,13 +11,17 @@ const chats = [
         userImg: "/profileImage/Jeremy.jpg",
         name: "Jeremy",
         message: "Can't wait for the beach volleyball match!",
+        message2: "I'm outside your house",
+        message3: "I'm outside your house",
         time: "5h ago",
     },
     {
         id: 2,
         userImg: "/profileImage/Sara.jpg",
         name: "Sara",
-        message: "The food crawl sounds amazing! Count me in.",
+        message: "The food crawl sounds amazing!",
+        message2: "I'm outside your house",
+        message3: "I'm outside your house",
         time: "1d ago",
     },
     {
@@ -25,6 +29,8 @@ const chats = [
         userImg: "/profileImage/Alex.jpg",
         name: "Alex",
         message: "Looking forward to the board games night!",
+        message2: "I'm outside your house",
+        message3: "I'm outside your house",
         time: "3d ago",
     },
     {
@@ -32,6 +38,8 @@ const chats = [
         userImg: "/profileImage/Nila.jpg",
         name: "Nila",
         message: "Is anyone else joining the yoga session?",
+        message2: "I'm outside your house",
+        message3: "I'm outside your house",
         time: "12d ago",
     },
     {
@@ -39,6 +47,8 @@ const chats = [
         userImg: "/profileImage/MayaChat.jpg",
         name: "Maya",
         message: "I'm outside your house",
+        message2: "I'm outside your house",
+        message3: "I'm outside your house",
         time: "21d ago",
     },
     {
@@ -68,6 +78,20 @@ const chats = [
         name: "Nila",
         message: "Where are you?",
         time: "502d ago",
+    },
+    {
+        id: 10,
+        userImg: "/profileImage/MayaChat.jpg",
+        name: "Maya",
+        message: "I'm outside your house",
+        time: "1000d ago",
+    },
+    {
+        id: 11,
+        userImg: "/profileImage/Jeremy.jpg",
+        name: "Jeremy",
+        message: "I'm outside your house",
+        time: "2000d ago",
     },
 ];
 

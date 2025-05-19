@@ -9,17 +9,19 @@ export default function ChatCard({ id, userImg, name, message, time }) {
                 className={styles.chatCard}
                 passHref
             >
-                <img
-                    src={userImg}
-                    alt="User"
-                    className={styles.userImg}
-                />
-                <div className={styles.chatText}>
-                    <div className={styles.chatUser}>
-                        <div className={styles.userName}>{name}</div>
-                        <div className={styles.time}>{time}</div>
+                <div className={styles.chatUserContainer}>
+                    <img
+                        src={userImg}
+                        alt="User"
+                        className={styles.userImg}
+                    />
+                    <div className={styles.chatText}>
+                        <div className={styles.chatUser}>
+                            <div className={styles.userName}>{name}</div>
+                            <div className={styles.time}>{time}</div>
+                        </div>
+                        <div className={styles.message}>{message}</div>
                     </div>
-                    <div className={styles.message}>{message}</div>
                 </div>
                 <img
                     className={styles.CaretRight}
