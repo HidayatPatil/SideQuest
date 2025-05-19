@@ -1,5 +1,8 @@
 import NavBar from "@/components/navBar/navBar";
+import StatusBar from "@/components/statusBar/statusBar";
 import ProfileCard from "@/components/profileCard/profileCard";
+import Button from "@/components/button/button";
+//yippee
 
 export default function Profile() {
     return (
@@ -63,6 +66,13 @@ export default function Profile() {
                                     Hearing Impaired
                                 </div>
                             </div>
+
+                            <Button
+                                text="Edit Profile"
+                                variant="outline"
+                                onClick={() => alert("Edit!")}
+                                style={{ width: "100%" }}
+                            />
                         </div>
                     </div>
                 </div>
