@@ -54,7 +54,7 @@ export default function QuestCardComplete({
 				<div className={styles.questFeedback}>
 					<Button
 						text="Feedback"
-						variant="secondary"
+						variant="outline"
 						onClick={onFeedbackClick} // ✅ call the handler passed from page
 					/>
 				</div>
