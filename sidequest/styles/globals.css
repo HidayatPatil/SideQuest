@@ -274,6 +274,7 @@ h1 {
 .questboardPage,
 .questDetailPage {
 	margin-top: 44px;
+    padding-bottom: 90px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
