@@ -40,9 +40,8 @@ export default function QuestBoard() {
 			.toLowerCase()
 			.includes(searchQuery.toLowerCase());
 
-		if (viewMode === "Explore") return matchesSearch && !isLiked;
 		if (viewMode === "Saved") return matchesSearch && isLiked;
-		return matchesSearch;
+		return matchesSearch; // "Explore" or default — show all
 	});
 
 	return (

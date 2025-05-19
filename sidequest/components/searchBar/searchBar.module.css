@@ -44,3 +44,9 @@
 	border: 1px solid var(--Secondary-secondary-300, #a09c97);
 	background: var(--WHITE, #fff);
 }
+
+.clearIcon, .searchIcon {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
