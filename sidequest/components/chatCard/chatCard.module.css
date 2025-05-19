@@ -58,6 +58,10 @@
 .message {
     color: black;
     font-weight: 300;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .time {

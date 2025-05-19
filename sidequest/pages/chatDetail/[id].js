@@ -6,26 +6,46 @@ export default function ChatDetail() {
     const router = useRouter();
     const { id } = router.query;
 
-    const chat = chats.find((c) => c.id === id);
+    const chat = chats.find((c) => c.id === Number(id));
 
     if (!chat) {
         return <p>Loading...</p>;
     }
 
-    const imagePath = `/questImage/${chat.name}.jpg`;
+    const imagePath = `/profileImage/${chat.name}.jpg`;
 
     return (
         <div className="chatDetailContainer">
             <StatusBar />
-            <h1>{chat.name}</h1>
-            <img
-                src={imagePath}
-                alt="User"
-            />
-            <div className="chatMessage">{chat.message3}</div>
-            <div className="chatMessage">{chat.message2}</div>
-            <div className="chatMessage">{chat.message}</div>
-            <div className="chatTime">{chat.time}</div>
+            <div className="chatDetailPage">
+                <h1 className="chatDetailHeader">{chat.name}</h1>
+                <div className="chatMessageContainer">
+                    <img
+                        src={imagePath}
+                        alt="User"
+                    />
+                    <div className="chatMessageText">{chat.message3}</div>
+                    <div className="chatTime">{chat.time}</div>
+                </div>
+
+                <div className="chatMessageContainer">
+                    <img
+                        src={imagePath}
+                        alt="User"
+                    />
+                    <div className="chatMessageText">{chat.message2}</div>
+                    <div className="chatTime">{chat.time}</div>
+                </div>
+
+                <div className="chatMessageContainer">
+                    <img
+                        src={imagePath}
+                        alt="User"
+                    />
+                    <div className="chatMessageText">{chat.message}</div>
+                    <div className="chatTime">{chat.time}</div>
+                </div>
+            </div>
         </div>
     );
 }

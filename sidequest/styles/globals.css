@@ -348,14 +348,84 @@ h1 {
     justify-content: center;
     align-items: center;
     height: 54px;
-    color: var(--BLACK, #0c0b0b);
+    color: black;
     font-family: Rubik;
     font-size: 24px;
     line-height: 32px;
+    border-bottom: 1px solid #dcdbdb;
 }
 
 .chatCards {
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 1px;
+}
+
+/* -------------------------Chat Detail---------------------------- */
+
+.chatDetailContainer {
+    height: 100vh;
+    /* overflow: hidden; 🔒 Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.chatDetailPage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chatDetailHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 60px;
+    border-bottom: 1px solid #dcdbdb;
+}
+
+.chatMessageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px 16px;
+}
+
+.chatMessageContainer img {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.chatMessageText {
+    display: flex;
+    max-width: 276px;
+    height: 45px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 14px;
+    margin: 0px 10px 0px 18px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 8px;
+    background: var(--Secondary-secondary-50, #edecec);
+}
+
+.chatTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--Secondary-secondary-800, #322e2a);
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
 }
