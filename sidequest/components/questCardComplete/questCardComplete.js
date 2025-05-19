@@ -4,6 +4,7 @@ import CardVisual from "../cardVisual/cardVisual";
 import Button from "../button/button";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import FeedBack from "../feedbackPanel/feedback";
 
 export default function QuestCardComplete({
 	id,
@@ -12,6 +13,7 @@ export default function QuestCardComplete({
 	tags,
 	memberCount,
 	date,
+	onFeedbackClick, // ✅ Accept the prop
 }) {
 	return (
 		<CardVisual>
@@ -49,8 +51,12 @@ export default function QuestCardComplete({
 				</div>
 			</Link>
 			<div className={styles.footerBody}>
-				<div className={styles.questChat}>
-					<Button />
+				<div className={styles.questFeedback}>
+					<Button
+						text="Feedback"
+						variant="secondary"
+						onClick={onFeedbackClick} // ✅ call the handler passed from page
+					/>
 				</div>
 			</div>
 		</CardVisual>

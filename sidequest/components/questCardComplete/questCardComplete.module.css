@@ -80,4 +80,13 @@
 	width: 20px;
 }
 
+.questFeedback {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
 
+.questFeedback Button {
+	width: 100%;
+}

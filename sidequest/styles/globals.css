@@ -92,6 +92,13 @@ h1 {
     object-fit: cover;
 }
 
+.feedBackPanel {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+}
+
 /* -------------------------Quest Details---------------------------- */
 
 .questDetailPage {
