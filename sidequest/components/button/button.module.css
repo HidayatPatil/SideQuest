@@ -1,6 +1,6 @@
 .button {
     display: flex;
-    width: auto;
+    width: 100%;
     max-width: 361px;
     height: 48 px;
     padding: 12px 16px;
