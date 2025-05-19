@@ -1,0 +1,76 @@
+.chatCardContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: auto;
+    height: 84px;
+}
+
+.chatCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding: 12px 21px;
+    border-bottom: 1px solid #edecec;
+    gap: 16px;
+}
+
+.chatUserContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.userImg {
+    width: 60px;
+    height: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.chatText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.chatUser {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 20px;
+}
+
+.userName {
+    color: black;
+    font-weight: 500;
+}
+
+.message {
+    color: black;
+    font-weight: 300;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.time {
+    color: #a09c97;
+    font-weight: 400;
+}
+
+.CaretRight {
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1/1;
+}

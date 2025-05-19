@@ -4,6 +4,11 @@ import styles from "@/components/searchBar/searchBar.module.css";
 export default function SearchBar({ onSearch }) {
 	const [query, setQuery] = useState("");
 
+	const clearSearch = () => {
+			setQuery("");
+			if (onSearch) onSearch("");
+		};
+
 	const handleChange = (e) => {
 		const value = e.target.value;
 		setQuery(value);
@@ -22,8 +27,22 @@ export default function SearchBar({ onSearch }) {
 					placeholder="Find your next adventure"
 					className={styles.input}
 				/>
-				<img className={styles.searchIcon} src="/Icons/searchIcon.svg" />
+				{query ? (
+					<img
+						src="/Icons/X.svg" // ← use your 'X' icon here
+						className={styles.clearIcon}
+						onClick={clearSearch}
+						alt="Clear search"
+					/>
+				) : (
+					<img
+						src="/Icons/searchIcon.svg"
+						className={styles.searchIcon}
+						alt="Search"
+					/>
+				)}
 			</div>
+
 			{/* <div className={styles.filter}>
 				<img className={styles.filterIcon} src="/Icons/filterIcon.svg" />
 			</div> */}

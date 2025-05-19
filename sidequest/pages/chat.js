@@ -1,11 +1,33 @@
 import NavBar from "@/components/navBar/navBar";
+import StatusBar from "@/components/statusBar/statusBar";
+import Link from "next/link";
+import ChatCard from "@/components/chatCard/chatCard";
+import chat from "@/data/chatCardData";
 
 export default function Chat() {
-	return (
-		<main>
-			<h1>Welcome to Quest Chats</h1>
-			<p>Connect with fellow adventures for your journey ahead!</p>
-			<NavBar/>
-		</main>
-	);
+    return (
+        <div className="chatContainer">
+            <StatusBar />
+            <div className="chatPage">
+                <div className="chatHeader">
+                    <h1>Chat Log</h1>
+                </div>
+                <div className="chatCards">
+                    {chat.map((chat) => {
+                        return (
+                            <ChatCard
+                                key={chat.id}
+                                id={chat.id}
+                                userImg={chat.userImg}
+                                name={chat.name}
+                                message={chat.message}
+                                time={chat.time}
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+            <NavBar />
+        </div>
+    );
 }

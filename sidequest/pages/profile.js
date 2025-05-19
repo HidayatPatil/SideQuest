@@ -1,17 +1,14 @@
 import NavBar from "@/components/navBar/navBar";
 import ProfileCard from "@/components/profileCard/profileCard";
+import Button from "@/components/button/button";
 
 export default function Profile() {
     return (
         <div className="profileCointainer">
             <div className="profilePage">
-                <div className="statsContainer">
-                    <h1>Maya’s Profile</h1>
-                </div>
-                <div className="statsContainer">
-                    <div className="userProfileData">
-                        <ProfileCard />
-                    </div>
+                <h1>My Profile</h1>
+                <div className="userProfileData">
+                    <ProfileCard />
                 </div>
                 <div className="statsContainer">
                     <div className="sectionTitle">
@@ -23,7 +20,7 @@ export default function Profile() {
                                 Bonjour! I am new to Vancouver and wanting to
                                 explore the amazing nature here.
                             </div>
-                            <hr className="divider" />
+                            <hr className="profileDivider" />
                             <div className="profileStatsSection">
                                 <h4>Pronouns</h4>
                                 <div className="profileTag">She/Her</div>
@@ -63,6 +60,12 @@ export default function Profile() {
                                     Hearing Impaired
                                 </div>
                             </div>
+                            <Button
+                                text="Edit Profile"
+                                variant="outline"
+                                onClick={() => alert("Edit!")}
+                                style={{ width: "100%" }}
+                            />
                         </div>
                     </div>
                 </div>
