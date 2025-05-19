@@ -1,8 +1,6 @@
 import NavBar from "@/components/navBar/navBar";
-import StatusBar from "@/components/statusBar/statusBar";
 import ProfileCard from "@/components/profileCard/profileCard";
 import Button from "@/components/button/button";
-//yippee
 
 export default function Profile() {
     return (
