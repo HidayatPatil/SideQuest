@@ -352,7 +352,7 @@ h1 {
 }
 
 .userProfileData {
-    margin: 16px;
+    margin: 16px 0px;
 }
 
 .profileStats {
@@ -368,6 +368,10 @@ h1 {
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
+}
+
+.statsContainer h1 {
+    margin: auto;
 }
 
 .profileStatsContainer {
