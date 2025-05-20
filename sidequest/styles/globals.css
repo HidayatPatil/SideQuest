@@ -95,7 +95,6 @@ h1 {
 .feedBackPanel {
     position: fixed;
     bottom: 0;
-    right: 0;
     z-index: 5;
 }
 
@@ -243,13 +242,11 @@ h1 {
     background: white;
     position: fixed;
     bottom: 0;
-    right: 0;
 }
 
 .applicationPanel {
     position: fixed;
     bottom: 0;
-    right: 0;
     z-index: 5;
 }
 
