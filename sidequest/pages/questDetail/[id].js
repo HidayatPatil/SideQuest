@@ -43,11 +43,7 @@ export default function QuestDetail() {
                         ></IconButton>
                         <div className="dateCalender">{quest.date}</div>
                     </div>
-                    <img
-                        className="questImage"
-                        src={imagePath}
-                        alt={quest.title}
-                    />
+                    <img className="questImage" src={imagePath} alt={quest.title} />
                 </div>
 
                 <div className="questDetailBody">
@@ -56,10 +52,7 @@ export default function QuestDetail() {
 
                     <div className="cardTags">
                         {quest?.tags?.map((tag, index) => (
-                            <QuestTags
-                                key={index}
-                                tagName={tag}
-                            />
+                            <QuestTags key={index} tagName={tag} />
                         ))}
                     </div>
                 </div>
@@ -81,21 +74,18 @@ export default function QuestDetail() {
 
                 <div className="locationDetails">
                     <a
-                        href="https://www.google.com/maps"
+                        href="https://maps.app.goo.gl/T1PcRcXRhw9BAHEM6"
                         className="googleMapLink"
                         target="_blank"
                     >
                         <div className="locationView">
                             <div className="locationIconContainer">
-                                <img
-                                    className="locationIcon"
-                                    src="/Icons/ArrowsOut.svg"
-                                />
+                                <img className="locationIcon" src="/Icons/ArrowsOut.svg" />
                             </div>
                         </div>
                         <p>
-                            Note: Location can potential change. Make sure to
-                            check in often to be updated on any changes.
+                            Note: Location can potential change. Make sure to check in often to be
+                            updated on any changes.
                         </p>
                     </a>
                 </div>
@@ -109,29 +99,17 @@ export default function QuestDetail() {
                     <div className="memberCount">{quests.memberCount}</div>
                     <div className="partyMembersList">
                         <div className="partyMembersProfile">
-                            <img
-                                className="partyMember"
-                                src="/profileImage/Nila.jpg"
-                                alt="User"
-                            />
+                            <img className="partyMember" src="/profileImage/Nila.jpg" alt="User" />
                             <div className="partyMemberName">Kansi M</div>
                             <div className="partyMemberID">ID#012938</div>
                         </div>
                         <div className="partyMembersProfile">
-                            <img
-                                className="partyMember"
-                                src="/profileImage/Alex.jpg"
-                                alt="User"
-                            />
+                            <img className="partyMember" src="/profileImage/Alex.jpg" alt="User" />
                             <div className="partyMemberName">Simpon S</div>
                             <div className="partyMemberID">ID#013328</div>
                         </div>
                         <div className="partyMembersProfile">
-                            <img
-                                className="partyMember"
-                                src="/profileImage/Sara.jpg"
-                                alt="User"
-                            />
+                            <img className="partyMember" src="/profileImage/Sara.jpg" alt="User" />
                             <div className="partyMemberName">Zhunshi L</div>
                             <div className="partyMemberID">ID#120493</div>
                         </div>
@@ -154,11 +132,7 @@ export default function QuestDetail() {
                 </div>
             </div>
             <div className="questApplication">
-                <Button
-                    text="Join Quest"
-                    variant="primary"
-                    onClick={openApplicationPanel}
-                />
+                <Button text="Join Quest" variant="primary" onClick={openApplicationPanel} />
                 {/* <div className="likeQuest">
                     <img />
                 </div> */}
