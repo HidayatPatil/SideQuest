@@ -98,17 +98,13 @@ h1 {
     z-index: 5;
 }
 
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
 }
+
 
 .snackbar {
     position: fixed;
@@ -126,7 +122,7 @@ h1 {
     color: white;
     font-size: 14px;
     font-weight: 500;
-    animation: fadeOut 4s forwards;
+    animation: fadeInOut 4s forwards;
     white-space: nowrap;
 }
 /* -------------------------Quest Details---------------------------- */
