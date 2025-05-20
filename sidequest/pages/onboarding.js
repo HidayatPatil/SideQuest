@@ -1,38 +1,58 @@
 import Carousel from "@/components/carousel/carousel";
 import Button from "@/components/button/button";
-import FormInput from "@/components/formInput/formInput";
 import { useState } from "react";
+import SignUp from "@/components/signUp/signUp";
 
 export default function Onboarding() {
-    const [email, setEmail] = useState("");
+    const [currentStep, setCurrentStep] = useState("welcome");
 
-    return (
-        <div className="onboardingPage">
-            <Carousel />
-            <FormInput
-                type="text"
-                placeholder="Enter your email"
-                label="Email"
-                value={email}
-                onChange={setEmail}
-                errorMessage="Invalid email address"
-                isValid={true}
-                isRequired={true}
-                clearable={true}
-                onClear={() => setEmail("")}
-            />
-            <div className="buttonContainer">
-                <Button
-                    text={"Sign Up"}
-                    onClick={() => alert("Sign Up Clicked!")}
-                    variant="primary"
-                ></Button>
-                <Button
-                    text={"Already have an account? Log In"}
-                    onClick={() => alert("Log In Clicked!")}
-                    variant="outline"
-                ></Button>
-            </div>
-        </div>
-    );
+    const renderStep = () => {
+        switch (currentStep) {
+            case "welcome":
+                return (
+                    <>
+                        <Carousel />
+                        <div className="buttonContainer">
+                            <Button
+                                text={"Sign Up"}
+                                onClick={() => setCurrentStep("signup")}
+                                variant="primary"
+                            ></Button>
+                            <Button
+                                text={"Already have an account? Log In"}
+                                onClick={() => setCurrentStep("signup")}
+                                variant="outline"
+                            ></Button>
+                        </div>
+                    </>
+                );
+            case "signup":
+                return (
+                    <>
+                        <SignUp
+                            onNext={() => setCurrentStep("accountSetup")}
+                            onBack={() => setCurrentStep("welcome")}
+                        />
+                        <div className="buttonContainer">
+                            <Button
+                                icon={"/Icons/googleLogo.svg"}
+                                iconPosition="left"
+                                text={"Continue with Google"}
+                                onClick={() => setCurrentStep("accountSetup")}
+                                variant="outline"
+                            ></Button>
+                            <Button
+                                icon={"/Icons/appleLogo.svg"}
+                                iconPosition="left"
+                                text={"Continue with Apple"}
+                                onClick={() => setCurrentStep("accountSetup")}
+                                variant="outline"
+                            ></Button>
+                        </div>
+                    </>
+                );
+        }
+    };
+
+    return <div className="onboardingPage">{renderStep()}</div>;
 }
