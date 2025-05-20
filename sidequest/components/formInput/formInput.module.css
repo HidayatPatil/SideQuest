@@ -53,3 +53,36 @@
     color: var(--Error-error-500, #e53535);
     font-size: 14px;
 }
+
+.passwordRules {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rulesTitle {
+    color: var(--Secondary-secondary-400, #8a827a);
+    font-size: 14px;
+}
+
+.rulesList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ruleItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.checkIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.ruleText {
+    color: var(--Secondary-secondary-400, #8a827a);
+    font-size: 12px;
+}

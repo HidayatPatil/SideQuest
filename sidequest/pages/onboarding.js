@@ -2,6 +2,7 @@ import Carousel from "@/components/carousel/carousel";
 import Button from "@/components/button/button";
 import { useState } from "react";
 import SignUp from "@/components/signUp/signUp";
+import AccountSetup from "@/components/accountSetup/accountSetup";
 
 export default function Onboarding() {
     const [currentStep, setCurrentStep] = useState("welcome");
@@ -49,6 +50,15 @@ export default function Onboarding() {
                                 variant="outline"
                             ></Button>
                         </div>
+                    </>
+                );
+            case "accountSetup":
+                return (
+                    <>
+                        <AccountSetup
+                            onNext={() => setCurrentStep("welcome")}
+                            onBack={() => setCurrentStep("signup")}
+                        />
                     </>
                 );
         }
