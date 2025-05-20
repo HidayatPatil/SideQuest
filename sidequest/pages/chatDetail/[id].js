@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import StatusBar from "@/components/statusBar/statusBar";
 import chats from "@/data/chatCardData";
+import IconButton from "@/components/iconButton/iconButton";
 
 export default function ChatDetail() {
     const router = useRouter();
@@ -18,7 +19,17 @@ export default function ChatDetail() {
         <div className="chatDetailContainer">
             <StatusBar />
             <div className="chatDetailPage">
-                <h1 className="chatDetailHeader">{chat.name}</h1>
+                <h1 className="chatDetailHeader">
+                    <div className="chatDetailHeaderButton">
+                        <IconButton
+                            icon={"/Icons/arrowLeft.svg"}
+                            iconPosition="left"
+                            variant="noOutline"
+                            onClick={() => router.back()}
+                        />
+                    </div>
+                    <div className="chatDetailHeaderTitle">{chat.name}</div>
+                </h1>
                 <div className="chatMessageContainer">
                     <img
                         src={imagePath}
