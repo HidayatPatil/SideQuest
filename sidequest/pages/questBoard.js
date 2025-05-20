@@ -10,6 +10,10 @@ export default function QuestBoard() {
     const [viewMode, setViewMode] = useState("Explore");
     const [likedQuests, setLikedQuests] = useState({});
 
+    // Snackbar states
+    const [showSnackbar, setShowSnackbar] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState("");
+
     // Load likedQuests from localStorage on mount
     useEffect(() => {
         const stored = localStorage.getItem("likedQuests");
@@ -23,12 +27,21 @@ export default function QuestBoard() {
         setTimeout(() => {
             setLikedQuests((prev) => {
                 const updated = { ...prev };
+                let message = "";
                 if (updated[questId]) {
                     delete updated[questId];
+                    message = "Removed from Saved :(";
                 } else {
                     updated[questId] = true;
+                    message = "Added to Saved!❤️";
                 }
                 localStorage.setItem("likedQuests", JSON.stringify(updated));
+
+                // Show snackbar with message
+                setSnackbarMessage(message);
+                setShowSnackbar(true);
+                setTimeout(() => setShowSnackbar(false), 4000); // hide after 4s
+
                 return updated;
             });
         }, 500); // delay removal from UI
@@ -83,6 +96,9 @@ export default function QuestBoard() {
                     />
                 </div>
             </div>
+
+            {showSnackbar && <div className="snackbar">{snackbarMessage}</div>}
+
             <NavBar />
         </div>
     );

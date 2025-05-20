@@ -1,40 +1,40 @@
 .panelBody {
-	display: flex;
-	width: 393px;
-	padding: 14px 16px 34px 16px;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-	border-radius: 40px 40px 0px 0px;
-	background: white;
+    display: flex;
+    width: 393px;
+    padding: 14px 16px 34px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 40px 40px 0px 0px;
+    background: white;
 }
 
 .panelHandle {
-	width: 59px;
-	height: 7px;
-	border-radius: 100px;
-	background: #d9d9d9;
+    width: 59px;
+    height: 7px;
+    border-radius: 100px;
+    background: #d9d9d9;
 }
 
 .panelTitle {
-	color: #0c0b0b;
-	text-align: center;
-	font-size: 24px;
-	font-weight: 600;
-	line-height: 32px; 
+    color: #0c0b0b;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
 }
 
 .memberCard {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .memberImage {
-	width: 68px;
-	height: 68px;
+    width: 68px;
+    height: 68px;
     object-fit: cover;
     border-radius: 100px;
 }
@@ -54,18 +54,36 @@
 .memberDetails p {
     font-size: 16px;
     font-weight: 400;
-    color: #8A827A;
+    color: #8a827a;
 }
 
-.upvote, .downvote {
+.upvote,
+.downvote {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EDECEC;
+    background-color: #edecec;
     padding: 10px;
     border-radius: 40px;
+    transition: background-color 0.3s;
+}
+
+.upvote img,
+.downvote img {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+}
+
+.upvoteActive {
+    background-color: #3f9fff;
+}
+
+.downvoteActive {
+    background-color: #ff9000;
 }
 
 .submitButton {
     width: 100%;
 }
+
