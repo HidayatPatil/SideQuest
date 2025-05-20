@@ -511,7 +511,7 @@ h1 {
 }
 
 .onboardingPage {
-    height: 852px;
+    height: 100vh;
     width: 393px;
     display: flex;
     flex-direction: column;
