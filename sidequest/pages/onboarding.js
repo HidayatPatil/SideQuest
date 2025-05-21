@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import SignUp from "@/components/signUp/signUp";
 import AccountSetup from "@/components/accountSetup/accountSetup";
 import IconButton from "@/components/iconButton/iconButton";
+import ProfilePhoto from "@/components/profilePhoto/profilePhoto";
 import BasicInfo from "@/components/basicInfo/basicInfo";
 import SelfIntro from "@/components/selfIntro/selfIntro";
 
@@ -126,10 +127,7 @@ export default function Onboarding() {
                                 onClick={() => setCurrentStep("home")} // TODO: change to overlay
                                 variant="noOutline"
                             ></Button>
-                            {/* <ProfilePhoto
-                                onNext={() => setCurrentStep("basicInfo")}
-                                onBack={() => setCurrentStep("prompt")}
-                            /> */}
+                            <ProfilePhoto />
                         </div>
                         <div className="formButtonContainer">
                             <Button
