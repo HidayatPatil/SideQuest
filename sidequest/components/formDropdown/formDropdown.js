@@ -49,11 +49,7 @@ export default function FormDropdown({ placeholder, label, options = [] }) {
                 >
                     {displayValue}
                 </span>
-                <img
-                    src="/Icons/dropdownArrow.svg"
-                    alt="toggle"
-                    className={`${styles.chevron} ${isOpen ? styles.rotate : ""}`}
-                />
+                <img src="/Icons/dropdownArrow.svg" alt="toggle" className={styles.chevron} />
             </div>
 
             {isOpen && (
