@@ -3,6 +3,7 @@ import Button from "@/components/button/button";
 import { useState, useEffect } from "react";
 import SignUp from "@/components/signUp/signUp";
 import AccountSetup from "@/components/accountSetup/accountSetup";
+import IconButton from "@/components/iconButton/iconButton";
 
 export default function Onboarding() {
     const [currentStep, setCurrentStep] = useState("default");
@@ -73,11 +74,20 @@ export default function Onboarding() {
             case "prompt":
                 return (
                     <>
+                        <IconButton
+                            icon="/Icons/arrowLeft.svg"
+                            variant={"noOutline"}
+                            onClick={() => setCurrentStep("accountSetup")}
+                        ></IconButton>
                         <div className="promptContainer">
-                            <h1 className="promptTitle">Help other adventurers get to know you</h1>
+                            <h1 className="promptTitle">
+                                Help other adventurers
+                                <br />
+                                get to know you
+                            </h1>
                             <img
                                 src="/appGraphics/introduction.svg"
-                                alt="Prompt image"
+                                alt="Introduce yourself"
                                 className="promptImage"
                             />
                             <div className="promptTextContainer">
@@ -87,19 +97,38 @@ export default function Onboarding() {
                                 </p>
                             </div>
                         </div>
-                        <onboardingPrompt
-                            onNext={() => setCurrentStep("profilePhoto")}
-                            onBack={() => setCurrentStep("accountSetup")}
-                        />
+                        <div className="buttonContainer">
+                            <div className="timeContainer">
+                                <img src="/Icons/clock.svg" alt="Time icon" className="timeIcon" />
+                                <p className="timeText">Takes 5 - 10 minutes</p>
+                            </div>
+                            <Button
+                                text={"Build Your Profile"}
+                                onClick={() => setCurrentStep("profilePhoto")}
+                                variant="primary"
+                            ></Button>
+                        </div>
                     </>
                 );
             case "profilePhoto":
                 return (
                     <>
-                        <ProfilePhoto
-                            onNext={() => setCurrentStep("basicInfo")}
-                            onBack={() => setCurrentStep("prompt")}
-                        />
+                        <div className="profileBuilderContainer">
+                            <h1 className="profileBuilderTitle">Profile Photo</h1>
+                            <p className="profileBuilderText">
+                                Make sure the photo clearly shows your face, this allows other
+                                adventurers to easily recognize you during quest meetups
+                            </p>
+                            <Button
+                                text={"Skip for now"}
+                                onClick={() => setCurrentStep("home")} // TODO: change to overlay
+                                variant="noOutline"
+                            ></Button>
+                            {/* <ProfilePhoto
+                                onNext={() => setCurrentStep("basicInfo")}
+                                onBack={() => setCurrentStep("prompt")}
+                            /> */}
+                        </div>
                         <div className="formButtonContainer">
                             <Button
                                 text={"Back"}
@@ -117,10 +146,21 @@ export default function Onboarding() {
             case "basicInfo":
                 return (
                     <>
-                        <BasicInfo
+                        <div className="profileBuilderContainer">
+                            <h1 className="profileBuilderTitle">Basic Information</h1>
+                            <p className="profileBuilderText">
+                                These can be updated later in your Profile page
+                            </p>
+                            <Button
+                                text={"Skip for now"}
+                                onClick={() => setCurrentStep("home")} // TODO: change to overlay
+                                variant="noOutline"
+                            ></Button>
+                            {/* <BasicInfo
                             onNext={() => setCurrentStep("selfIntro")}
                             onBack={() => setCurrentStep("profilePhoto")}
-                        />
+                        /> */}
+                        </div>
                         <div className="formButtonContainer">
                             <Button
                                 text={"Back"}
@@ -138,10 +178,21 @@ export default function Onboarding() {
             case "selfIntro":
                 return (
                     <>
-                        <SelfIntro
+                        <div className="profileBuilderContainer">
+                            <h1 className="profileBuilderTitle">Self-introduction</h1>
+                            <p className="profileBuilderText">
+                                These can be updated later in your Profile page
+                            </p>
+                            <Button
+                                text={"Skip for now"}
+                                onClick={() => setCurrentStep("home")} // TODO: change to overlay
+                                variant="noOutline"
+                            ></Button>
+                            {/* <SelfIntro
                             onNext={() => setCurrentStep("home")}
                             onBack={() => setCurrentStep("basicInfo")}
-                        />
+                        /> */}
+                        </div>
                         <div className="formButtonContainer">
                             <Button
                                 text={"Back"}
@@ -150,7 +201,7 @@ export default function Onboarding() {
                             ></Button>
                             <Button
                                 text={"Next"}
-                                onClick={() => setCurrentStep("home")}
+                                onClick={() => setCurrentStep("home")} // TODO: link to home page
                                 variant="primary"
                             ></Button>
                         </div>

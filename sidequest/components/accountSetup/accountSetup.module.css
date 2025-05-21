@@ -68,6 +68,7 @@
     font-weight: 400;
     color: var(--BLACK, #0c0b0b);
     text-align: left;
+    cursor: pointer;
 }
 .agreementText a {
     color: var(--Primary-primary-700, #2d71b5);
