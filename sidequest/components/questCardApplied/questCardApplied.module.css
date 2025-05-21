@@ -1,140 +1,140 @@
 .mainBody {
-	display: flex;
-	flex-direction: row;
-	padding: 12px 16px 16px 16px;
-	gap: 16px;
+    display: flex;
+    flex-direction: row;
+    padding: 12px 16px 16px 16px;
+    gap: 16px;
 }
 
 .questImage {
-	background-color: #d6d3d2;
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	border-radius: 8px;
-	flex: 0 0 100px;
+    background-color: #d6d3d2;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex: 0 0 100px;
 }
 
 .mainContent {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .cardTitle {
-	display: flex;
-	flex-direction: row;
-	gap: 12px;
-	justify-content: space-between;
-	align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .titleText {
-	display: -webkit-box;
-	-webkit-line-clamp: 2; /* number of lines to show */
-	-webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
 
-	overflow: hidden;
-	text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
-	color: #2d71b5;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 20px;
+    color: #2d71b5;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
 }
 
 .cardTags {
-	display: flex;
-	align-items: center;
-	gap: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .cardDetails {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .memberCount,
 .questDate {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 6px;
-	color: #8a827a;
-	font-size: 14px;
-	line-height: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    color: #8a827a;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .footerBody {
-	display: flex;
-	padding: 12px 16px;
-	flex-direction: row;
-	align-items: flex-start;
-	gap: 12px;
-	align-self: stretch;
-	border-top: 1px solid #d6d3d2;
+    display: flex;
+    padding: 12px 16px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    border-top: 1px solid #d6d3d2;
 }
 
 .cardIcons {
-	height: 20px;
-	width: 20px;
+    height: 20px;
+    width: 20px;
 }
 
 .questChat {
-	display: flex;
-	padding: 8px;
-	justify-content: center;
-	align-items: center;
-	border-radius: 8px;
-	border: 1px solid #d6d3d2;
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #d6d3d2;
 }
 
 .chatquestIcon {
-	height: 24px;
-	width: 24px;
+    height: 24px;
+    width: 24px;
 }
 
 .questApplicationStatus {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	flex: 1 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
 }
 
 .dropdown {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	height: 40px;
-	padding: 8px 16px;
-	border-radius: 8px;
-	border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
-	background: var(--WHITE, #fff);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+    background: var(--WHITE, #fff);
 
-	/* Remove native arrow */
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
+    /* Remove native arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
-	/* Add custom arrow icon */
-	background-image: url("/Icons/dropdownArrow.svg");
-	background-repeat: no-repeat;
-	background-position: right 20px center; /* ⬅️ adjust this to control arrow position */
-	background-size: 20px;
+    /* Add custom arrow icon */
+    background-image: url("/Icons/dropdownArrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center; /* ⬅️ adjust this to control arrow position */
+    background-size: 20px;
 }
 
 .dropdown:focus {
-	outline: none;
+    outline: none;
 }
 
 .dropdownOptions {
-	color: var(--Secondary-secondary-500, #625950);
+    color: var(--Secondary-secondary-500, #625950);
 
-	/* Body Regular */
-	font-family: Rubik;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 20px; /* 125% */
+    /* Body Regular */
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
 }
