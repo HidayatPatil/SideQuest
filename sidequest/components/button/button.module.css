@@ -37,6 +37,12 @@
     color: #333;
 }
 
+.noShadow {
+    background: var(--WHITE, #fff);
+    border: 1px solid var(--Secondary-secondary-100, #d6d3d2);
+    box-shadow: none;
+}
+
 .noOutline {
     background: var(--WHITE, #fff);
     border: none;
@@ -84,6 +90,10 @@
 
 .outlineText {
     color: var(--Secondary-secondary-700, #45403a);
+}
+
+.noShadowText {
+    color: var(--Primary-primary-700, #2d71b5);
 }
 
 .noOutlineText {
