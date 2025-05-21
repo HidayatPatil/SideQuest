@@ -542,6 +542,8 @@ h1 {
     background: var(--Secondary-secondary-50, #edecec);
 }
 
+/* ----------------- Onboarding ---------------------- */
+
 .onboardingPage {
     height: 100vh;
     width: 393px;
@@ -559,6 +561,35 @@ h1 {
     gap: 16px;
     position: fixed;
     bottom: 32px;
+}
+
+.splashContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 25%;
+}
+
+.splashImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.splashTextContainer {
+    position: relative;
+    bottom: 64px;
+    width: 60%;
+}
+
+.splashText {
+    color: var(--BLACK, #0c0b0b);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
 }
 
 /* -------------------------Chat---------------------------- */
