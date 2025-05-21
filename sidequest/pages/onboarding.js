@@ -7,9 +7,19 @@ import IconButton from "@/components/iconButton/iconButton";
 import ProfilePhoto from "@/components/profilePhoto/profilePhoto";
 import BasicInfo from "@/components/basicInfo/basicInfo";
 import SelfIntro from "@/components/selfIntro/selfIntro";
+import Stepper from "@/components/stepper/stepper";
 
 export default function Onboarding() {
     const [currentStep, setCurrentStep] = useState("default");
+    const [showDialogue, setShowDialogue] = useState(false);
+
+    const openDialogue = () => {
+        setShowDialogue(true);
+    };
+
+    const closeDialogue = () => {
+        setShowDialogue(false);
+    };
 
     useEffect(() => {
         if (currentStep === "default") {
@@ -116,6 +126,7 @@ export default function Onboarding() {
             case "profilePhoto":
                 return (
                     <>
+                        <Stepper step={1} />
                         <div className="profileBuilderContainer">
                             <h1 className="profileBuilderTitle">Profile Photo</h1>
                             <p className="profileBuilderText">
@@ -124,7 +135,7 @@ export default function Onboarding() {
                             </p>
                             <Button
                                 text={"Skip for now"}
-                                onClick={() => setCurrentStep("home")} // TODO: change to overlay
+                                onClick={openDialogue}
                                 variant="noOutline"
                             ></Button>
                             <ProfilePhoto />
@@ -141,11 +152,35 @@ export default function Onboarding() {
                                 variant="primary"
                             ></Button>
                         </div>
+                        {showDialogue && (
+                            <div className="skipOverlay">
+                                <div className="skipDialogue">
+                                    <h1 className="skipDialogueTitle">Skip Building Profile?</h1>
+                                    <p className="skipDialogueText">
+                                        You can find and update your profile information later in
+                                        the profile page.
+                                    </p>
+                                    <div className="skipDialogueButtonContainer">
+                                        <Button
+                                            text={"Got it, Skip"}
+                                            onClick={() => (window.location.href = "/")}
+                                            variant="primary"
+                                        ></Button>
+                                        <Button
+                                            text={"Back"}
+                                            onClick={closeDialogue}
+                                            variant="outline"
+                                        ></Button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </>
                 );
             case "basicInfo":
                 return (
                     <>
+                        <Stepper step={2} />
                         <div className="profileBuilderContainer">
                             <h1 className="profileBuilderTitle">Basic Information</h1>
                             <p className="profileBuilderText">
@@ -153,7 +188,7 @@ export default function Onboarding() {
                             </p>
                             <Button
                                 text={"Skip for now"}
-                                onClick={() => setCurrentStep("home")} // TODO: change to overlay
+                                onClick={openDialogue}
                                 variant="noOutline"
                             ></Button>
                             <BasicInfo />
@@ -170,11 +205,35 @@ export default function Onboarding() {
                                 variant="primary"
                             ></Button>
                         </div>
+                        {showDialogue && (
+                            <div className="skipOverlay">
+                                <div className="skipDialogue">
+                                    <h1 className="skipDialogueTitle">Skip Building Profile?</h1>
+                                    <p className="skipDialogueText">
+                                        You can find and update your profile information later in
+                                        the profile page.
+                                    </p>
+                                    <div className="skipDialogueButtonContainer">
+                                        <Button
+                                            text={"Got it, Skip"}
+                                            onClick={() => (window.location.href = "/")}
+                                            variant="primary"
+                                        ></Button>
+                                        <Button
+                                            text={"Back"}
+                                            onClick={closeDialogue}
+                                            variant="outline"
+                                        ></Button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </>
                 );
             case "selfIntro":
                 return (
                     <>
+                        <Stepper step={3} />
                         <div className="profileBuilderContainer">
                             <h1 className="profileBuilderTitle">Self-introduction</h1>
                             <p className="profileBuilderText">
@@ -182,7 +241,7 @@ export default function Onboarding() {
                             </p>
                             <Button
                                 text={"Skip for now"}
-                                onClick={() => setCurrentStep("home")} // TODO: change to overlay
+                                onClick={openDialogue}
                                 variant="noOutline"
                             ></Button>
                             <SelfIntro />
@@ -195,10 +254,33 @@ export default function Onboarding() {
                             ></Button>
                             <Button
                                 text={"Next"}
-                                onClick={() => setCurrentStep("home")} // TODO: link to home page
+                                onClick={() => (window.location.href = "/")}
                                 variant="primary"
                             ></Button>
                         </div>
+                        {showDialogue && (
+                            <div className="skipOverlay">
+                                <div className="skipDialogue">
+                                    <h1 className="skipDialogueTitle">Skip Building Profile?</h1>
+                                    <p className="skipDialogueText">
+                                        You can find and update your profile information later in
+                                        the profile page.
+                                    </p>
+                                    <div className="skipDialogueButtonContainer">
+                                        <Button
+                                            text={"Got it, Skip"}
+                                            onClick={() => (window.location.href = "/")}
+                                            variant="primary"
+                                        ></Button>
+                                        <Button
+                                            text={"Back"}
+                                            onClick={closeDialogue}
+                                            variant="outline"
+                                        ></Button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </>
                 );
             default:
