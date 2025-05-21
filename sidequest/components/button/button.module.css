@@ -94,6 +94,7 @@
 
 .noShadowText {
     color: var(--Primary-primary-700, #2d71b5);
+    font-weight: 500;
 }
 
 .noOutlineText {
