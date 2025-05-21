@@ -56,7 +56,7 @@ export default function Onboarding() {
                 return (
                     <>
                         <AccountSetup
-                            onNext={() => setCurrentStep("welcome")}
+                            onNext={() => setCurrentStep("")}
                             onBack={() => setCurrentStep("signup")}
                         />
                     </>

@@ -86,3 +86,21 @@
     color: var(--Secondary-secondary-400, #8a827a);
     font-size: 12px;
 }
+
+.emailHint {
+    color: var(--Secondary-secondary-400, #8a827a);
+    font-size: 14px;
+    text-align: right;
+}
+
+.emailValid {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 4px;
+}
+
+.emailCheckIcon {
+    width: 20px;
+    height: 20px;
+}

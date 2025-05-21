@@ -28,6 +28,10 @@ export default function FormInput({
         { text: "At least 1 symbol", fulfilled: /[^A-Za-z0-9]/.test(value) },
     ];
 
+    const validateEmail = (email) => {
+        return email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+    };
+
     return (
         <div className={styles.inputContainer}>
             <label className={styles.label}>{label}</label>
@@ -48,6 +52,21 @@ export default function FormInput({
                     </button>
                 )}
             </div>
+
+            {type === "email" && !validateEmail(value) && (
+                <p className={styles.emailHint}>Please enter a valid email address.</p>
+            )}
+
+            {type === "email" && validateEmail(value) && (
+                <div className={styles.emailValid}>
+                    <img
+                        src="/Icons/CheckListTick.svg"
+                        alt="fulfilled"
+                        className={styles.emailCheckIcon}
+                    />
+                    <span className={styles.emailHint}>Email address valid!</span>
+                </div>
+            )}
 
             {type === "password" && (
                 <div className={styles.passwordRules}>
