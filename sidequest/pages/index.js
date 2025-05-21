@@ -1,28 +1,46 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import ProfileCard from "@/components/profileCard/profileCard";
 import QuestCardApplied from "@/components/questCardApplied/questCardApplied";
 import QuestCardComplete from "@/components/questCardComplete/questCardComplete";
 import quests from "@/data/questCardData";
 import NavBar from "@/components/navBar/navBar";
 import FeedBack from "@/components/feedbackPanel/feedback";
-import { useState } from "react";
 
 export default function Home() {
-	const [showFeedback, setShowFeedback] = useState(false);
-	const [showSnackbar, setShowSnackbar] = useState(false);
+	const router = useRouter();
+	const [state, setState] = useState({
+		showFeedback: false,
+		showSnackbar: false,
+		loading: true,
+	});
 
-	const handleShowSnackbar = () => {
-		setShowSnackbar(true);
-		setTimeout(() => setShowSnackbar(false), 4000); // hide after 4s
+	useEffect(() => {
+		const hasSeenOnboarding = localStorage.getItem("hasSeenOnboarding"); // Check if the user has seen the onboarding
+
+		if (!hasSeenOnboarding) { 
+			localStorage.setItem("hasSeenOnboarding", "true"); 
+			router.replace("/onboarding");  // Redirect to onboarding page
+		} else {
+			setState((prev) => ({ ...prev, loading: false }));  
+		}
+	}, []);
+
+	const handleShowSnackbar = () => {  // Show snackbar
+		setState((prev) => ({ ...prev, showSnackbar: true }));
+		setTimeout(() => {
+			setState((prev) => ({ ...prev, showSnackbar: false }));
+		}, 4000);
 	};
 
-	const handleCloseFeedback = () => {
-		setShowFeedback(false);
-		handleShowSnackbar(); 
+	const handleCloseFeedback = () => {  // Close feedback panel
+		setState((prev) => ({ ...prev, showFeedback: false }));
+		handleShowSnackbar();
 	};
 
-	const openFeedbackPanel = () => {
+	const openFeedbackPanel = () => {  
 		console.log("Opening panel");
-		setShowFeedback(true);
+		setState((prev) => ({ ...prev, showFeedback: true }));
 	};
 
 	return (
@@ -76,10 +94,10 @@ export default function Home() {
 			</div>
 
 			<div className="feedBackPanel">
-				{showFeedback && <FeedBack onClose={handleCloseFeedback} />}
+				{state.showFeedback && <FeedBack onClose={handleCloseFeedback} />}
 			</div>
 
-			{showSnackbar && (
+			{state.showSnackbar && (
 				<div className="snackbar">Your feedback has been received!</div>
 			)}
 
