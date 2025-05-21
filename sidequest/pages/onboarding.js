@@ -5,6 +5,7 @@ import SignUp from "@/components/signUp/signUp";
 import AccountSetup from "@/components/accountSetup/accountSetup";
 import IconButton from "@/components/iconButton/iconButton";
 import BasicInfo from "@/components/basicInfo/basicInfo";
+import SelfIntro from "@/components/selfIntro/selfIntro";
 
 export default function Onboarding() {
     const [currentStep, setCurrentStep] = useState("default");
@@ -186,10 +187,7 @@ export default function Onboarding() {
                                 onClick={() => setCurrentStep("home")} // TODO: change to overlay
                                 variant="noOutline"
                             ></Button>
-                            {/* <SelfIntro
-                            onNext={() => setCurrentStep("home")}
-                            onBack={() => setCurrentStep("basicInfo")}
-                        /> */}
+                            <SelfIntro />
                         </div>
                         <div className="formButtonContainer">
                             <Button

@@ -40,11 +40,6 @@
 .chevron {
     width: 20px;
     height: 20px;
-    transition: transform 0.2s ease;
-}
-
-.rotate {
-    transform: rotate(180deg);
 }
 
 .overlay {
@@ -65,7 +60,7 @@
     flex-direction: column;
     align-items: center;
     background: white;
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 40px 40px 0px 0px;
     padding: 12px 24px 24px 24px;
     gap: 16px;
     width: 393px;
@@ -107,26 +102,9 @@
     height: 20px;
     border: 2px solid #e5e7eb;
     border-radius: 4px;
-    accent-color: #3b82f6;
+    accent-color: var(--Primary-primary-700, #2d71b5);
 }
 
 .checkboxText {
     font-size: 16px;
-}
-
-.saveButton {
-    width: 100%;
-    padding: 12px;
-    background: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.saveButton:hover {
-    background: #2563eb;
 }
