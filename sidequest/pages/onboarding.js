@@ -163,8 +163,8 @@ export default function Onboarding() {
                                     <div className="skipDialogueButtonContainer">
                                         <Button
                                             text={"Got it, Skip"}
-                                            onClick={() => (window.location.href = "/")}
                                             variant="primary"
+                                            link="/"
                                         ></Button>
                                         <Button
                                             text={"Back"}
@@ -216,8 +216,8 @@ export default function Onboarding() {
                                     <div className="skipDialogueButtonContainer">
                                         <Button
                                             text={"Got it, Skip"}
-                                            onClick={() => (window.location.href = "/")}
                                             variant="primary"
+                                            link="/"
                                         ></Button>
                                         <Button
                                             text={"Back"}
@@ -252,11 +252,7 @@ export default function Onboarding() {
                                 onClick={() => setCurrentStep("basicInfo")}
                                 variant="outline"
                             ></Button>
-                            <Button
-                                text={"Next"}
-                                onClick={() => (window.location.href = "/")}
-                                variant="primary"
-                            ></Button>
+                            <Button text={"Next"} variant="primary" link="/"></Button>
                         </div>
                         {showDialogue && (
                             <div className="skipOverlay">
@@ -269,8 +265,8 @@ export default function Onboarding() {
                                     <div className="skipDialogueButtonContainer">
                                         <Button
                                             text={"Got it, Skip"}
-                                            onClick={() => (window.location.href = "/")}
                                             variant="primary"
+                                            link="/"
                                         ></Button>
                                         <Button
                                             text={"Back"}
