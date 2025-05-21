@@ -542,6 +542,8 @@ h1 {
     background: var(--Secondary-secondary-50, #edecec);
 }
 
+/* ----------------- Onboarding ---------------------- */
+
 .onboardingPage {
     height: 100vh;
     width: 393px;
@@ -559,6 +561,97 @@ h1 {
     gap: 16px;
     position: fixed;
     bottom: 32px;
+}
+
+.splashContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 25%;
+}
+
+.splashImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.splashTextContainer {
+    position: relative;
+    bottom: 64px;
+    width: 60%;
+}
+
+.splashText {
+    color: var(--BLACK, #0c0b0b);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.promptContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.timeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+}
+
+.timeIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.timeText {
+    color: var(--Secondary-secondary-400, #8a827a);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.formButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    width: 361px;
+    gap: 16px;
+    position: fixed;
+    bottom: 32px;
+}
+
+.profileBuilderContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.profileBuilderTitle {
+    color: var(--BLACK, #0c0b0b);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+.profileBuilderText {
+    color: var(--BLACK, #0c0b0b);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
 }
 
 /* -------------------------Chat---------------------------- */

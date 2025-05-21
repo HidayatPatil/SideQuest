@@ -19,7 +19,7 @@ export default function SignUp({ onNext, onBack }) {
                 <img src="/appGraphics/signup.svg" alt="Sign Up" className={styles.image} />
             </div>
             <FormInput
-                type="text"
+                type="email"
                 placeholder="ex. janedoe@sidequest.com"
                 label="Email"
                 value={email}
