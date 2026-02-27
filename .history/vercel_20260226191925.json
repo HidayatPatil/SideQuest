@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd sidequest && npm install && npm run build",
+  "devCommand": "cd sidequest && npm run dev",
+  "installCommand": "cd sidequest && npm install",
+  "outputDirectory": "sidequest/.next"
+}

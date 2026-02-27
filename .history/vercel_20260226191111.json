@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd sidequest && npm run build",
+  "devCommand": "cd sidequest && npm run dev", 
+  "installCommand": "cd sidequest && npm install",
+  "outputDirectory": "sidequest/.next",
+  "framework": "nextjs",
+  "functions": {
+    "sidequest/pages/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}

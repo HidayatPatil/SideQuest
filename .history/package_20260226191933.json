@@ -1,16 +1,14 @@
 {
-  "name": "sidequest",
-  "version": "0.1.0",
+  "name": "sidequest-monorepo",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "cd sidequest && npm install && npm run build",
+    "dev": "cd sidequest && npm run dev",
+    "start": "cd sidequest && npm start"
+  },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "next build"
   },
   "dependencies": {
     "next": "^15.5.12",

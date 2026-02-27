@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "sidequest/pages/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/sidequest/$1"
+    }
+  ]
+}
