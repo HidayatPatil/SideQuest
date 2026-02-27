@@ -1,0 +1,13 @@
+{
+  "name": "sidequest-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd sidequest && npm install && npm run build",
+    "dev": "cd sidequest && npm run dev",
+    "start": "cd sidequest && npm start"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
