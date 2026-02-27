@@ -1,5 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "sidequest/.next",
-  "framework": "nextjs"
+  "outputDirectory": "sidequest/.next"
 }
